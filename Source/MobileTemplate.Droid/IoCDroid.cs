@@ -7,7 +7,7 @@ namespace MobileTemplate.Droid
         public static void RegisterDroidDependencies(this ContainerBuilder builder)
         {
             // -- Add your Android-specific injected services here.
-            // builder.Register<Class>().As<IInterface>();
+            // builder.RegisterType<Class>().As<IInterface>();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using MobileTemplate.Core.Pages.Menu;
+using Xamarin.Forms;
 
 namespace MobileTemplate.Core
 {
@@ -7,22 +8,7 @@ namespace MobileTemplate.Core
         public App()
         {
             // The root page of your application
-            var content = new ContentPage
-            {
-                Title = "MobileTemplate",
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
-
-            MainPage = new NavigationPage(content);
+            MainPage = new MasterDetailWrapper();
         }
 
         protected override void OnStart()

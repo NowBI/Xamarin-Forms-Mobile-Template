@@ -7,7 +7,7 @@ namespace MobileTemplate.iOS
         public static void RegisteriOSDependencies(this ContainerBuilder builder)
         {
             // -- Add your iOS-specific injected services here.
-            // builder.Register<Class>().As<IInterface>();
+            // builder.RegisterType<Class>().As<IInterface>();
         }
     }
 }
