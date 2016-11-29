@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Autofac;
 using Foundation;
 using MobileTemplate.Core;
 using UIKit;
@@ -23,10 +23,20 @@ namespace MobileTemplate.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            BuildIoCContainer();
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+        }
+
+        private void BuildIoCContainer()
+        {
+            var builder = new ContainerBuilder();
+            builder.RegisterCoreDependencies();
+            builder.RegisteriOSDependencies();
+            builder.Publish();
         }
     }
 }

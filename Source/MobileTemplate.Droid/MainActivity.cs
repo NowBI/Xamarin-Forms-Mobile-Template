@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Autofac;
 using MobileTemplate.Core;
 
 namespace MobileTemplate.Droid
@@ -15,8 +16,18 @@ namespace MobileTemplate.Droid
 
             base.OnCreate(bundle);
 
+            BuildIoCContainer();
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+        }
+
+        private void BuildIoCContainer()
+        {
+            var builder = new ContainerBuilder();
+            builder.RegisterCoreDependencies();
+            builder.RegisterDroidDependencies();
+            builder.Publish();
         }
     }
 }
