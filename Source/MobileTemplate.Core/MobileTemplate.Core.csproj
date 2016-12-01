@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Extensions\DisposalExtensions.cs" />
     <Compile Include="IoC.cs" />
     <Compile Include="Pages\Landing\LandingPage.cs" />
     <Compile Include="Pages\Landing\LandingView.xaml.cs">
@@ -56,8 +57,14 @@
       <DependentUpon>ReactiveSampleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ReactiveSample\ReactiveSampleViewModel.cs" />
+    <Compile Include="Pages\ServiceSample\ServiceSamplePage.cs" />
+    <Compile Include="Pages\ServiceSample\ServiceSampleView.xaml.cs">
+      <DependentUpon>ServiceSampleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ServiceSample\ServiceSampleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\SampleService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -122,6 +129,12 @@
     <EmbeddedResource Include="Pages\ReactiveSample\ReactiveSampleView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ServiceSample\ServiceSampleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

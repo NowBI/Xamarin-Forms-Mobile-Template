@@ -15,8 +15,8 @@ namespace MobileTemplate.Core
         public static void RegisterCoreDependencies(this ContainerBuilder builder)
         {
             // -- Add your shared injected services here.
-            // builder.RegisterType<Class>().As<IInterface>();
-            builder.RegisterType<NavigationService>().As<INavigationService>();
+            // builder.RegisterType<Class>().As<IInterface>().SingleInstance();
+            builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
         }
     }
 }
