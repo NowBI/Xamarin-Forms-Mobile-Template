@@ -2,7 +2,7 @@
 
 namespace MobileTemplate.Core.Pages.Landing
 {
-    public partial class LandingView : StackLayout
+    public partial class LandingView : ScrollView
     {
         public LandingView()
         {
