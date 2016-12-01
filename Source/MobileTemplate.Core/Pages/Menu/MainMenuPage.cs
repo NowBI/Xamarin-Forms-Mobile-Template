@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using MobileTemplate.Core.Pages.Landing;
+using MobileTemplate.Core.Pages.ReactiveSample;
 using MobileTemplate.Core.Services;
 using Xamarin.Forms;
 
@@ -20,7 +21,7 @@ namespace MobileTemplate.Core.Pages.Menu
                 new MainMenuItemViewModel("List Sample", "Icon.png", (o) => { navigationService.ResetStack(new LandingPage()); }),
                 new MainMenuItemViewModel("Shop Sample", "Icon.png", (o) => { navigationService.ResetStack(new LandingPage()); }),
                 new MainMenuItemViewModel("Service Sample", "Icon.png", (o) => { navigationService.ResetStack(new LandingPage()); }),
-                new MainMenuItemViewModel("Reactive Sample", "Icon.png", (o) => { navigationService.ResetStack(new LandingPage()); })
+                new MainMenuItemViewModel("Reactive Sample", "Icon.png", (o) => { navigationService.ResetStack(new ReactiveSamplePage()); })
             });
         }
     }
