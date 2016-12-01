@@ -1,4 +1,5 @@
 ﻿using System;
+using MobileTemplate.Core.Extensions;
 using Xamarin.Forms;
 
 namespace MobileTemplate.Core.Pages.Menu
@@ -14,10 +15,11 @@ namespace MobileTemplate.Core.Pages.Menu
         {
             (e.Item as MainMenuItemViewModel)?.Tapped?.Execute();
         }
-
+        
         public void Dispose()
         {
-            (BindingContext as IDisposable)?.Dispose();
+            this.DisposeChildren();
+            this.DisposeBindingContext();
         }
     }
 }

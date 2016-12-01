@@ -1,4 +1,5 @@
 ﻿using System;
+using MobileTemplate.Core.Extensions;
 using Xamarin.Forms;
 
 namespace MobileTemplate.Core.Pages.ReactiveSample
@@ -13,7 +14,8 @@ namespace MobileTemplate.Core.Pages.ReactiveSample
 
         public void Dispose()
         {
-            (BindingContext as IDisposable)?.Dispose();
+            this.DisposeContent();
+            this.DisposeBindingContext();
         }
     }
 }

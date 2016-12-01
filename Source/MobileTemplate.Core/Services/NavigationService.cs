@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -19,21 +20,37 @@ namespace MobileTemplate.Core.Services
             return GetNavigationPage().PushAsync(page, animated);
         }
 
-        public Task<Page> Pop(bool animated = true)
+        public async Task<Page> Pop(bool animated = true)
         {
-            return GetNavigationPage().PopAsync(animated);
+            var popped = await GetNavigationPage().PopAsync(animated);
+            (popped as IDisposable)?.Dispose();
+            return popped;
         }
 
-        public Task PopToRoot(bool animated = true)
+        public async Task PopToRoot(bool animated = true)
         {
-            return GetNavigationPage().PopToRootAsync(animated);
+            var navigation = GetNavigationPage();
+            var all = navigation.Navigation.NavigationStack.ToList();
+            await GetNavigationPage().PopToRootAsync(animated);
+            foreach (var item in all)
+            {
+                (item as IDisposable)?.Dispose();
+            }
         }
 
         public void ResetStack(Page page)
         {
+            var navigation = GetNavigationPage();
+            var all = navigation.Navigation.NavigationStack.ToList();
             var masterDetailPage = GetMasterDetailPage();
+            all.Add(masterDetailPage.Detail);
             masterDetailPage.Detail = new NavigationPage(page);
             masterDetailPage.IsPresented = false;
+
+            foreach (var item in all)
+            {
+                (item as IDisposable)?.Dispose();
+            }
         }
 
         private MasterDetailPage GetMasterDetailPage()
