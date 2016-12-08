@@ -136,7 +136,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sample\SampleXUnitTestsDroid.cs" />
+    <Compile Include="Sample\SampleXUnitDroidDeviceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -160,6 +160,10 @@
     <ProjectReference Include="..\MobileTemplate.Core\MobileTemplate.Core.csproj">
       <Project>{a7439e6b-2866-48f4-a696-85cc20a99f9e}</Project>
       <Name>MobileTemplate.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MobileTemplate.Droid.Test\MobileTemplate.Droid.Test.csproj">
+      <Project>{465cc8ae-10ed-4900-9c1c-429be113e2f3}</Project>
+      <Name>MobileTemplate.Droid.Test</Name>
     </ProjectReference>
     <ProjectReference Include="..\MobileTemplate.Droid\MobileTemplate.Droid.csproj">
       <Project>{0c5cf1b3-1f8e-4edd-af0c-5d9db6497a94}</Project>

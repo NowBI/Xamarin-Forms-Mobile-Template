@@ -1,17 +1,17 @@
 ﻿using Xunit;
 
-namespace MobileTemplate.iOS.Test.Device.Sample
+namespace MobileTemplate.Droid.Test.Device.Sample
 {
-    public class SampleXunitTests
+    public class SampleXunitDroidDeviceTests
     {
         [Fact]
-        public void PassediOSTest()
+        public void PassedDroidDeviceTest()
         {
             Assert.True(true);
         }
 
         [Fact(Skip = "Skip this Test")]
-        public void SkippediOSTest()
+        public void SkippedDroidDeviceTest()
         {
             Assert.False(true, "We were supposed to skip this!");
         }

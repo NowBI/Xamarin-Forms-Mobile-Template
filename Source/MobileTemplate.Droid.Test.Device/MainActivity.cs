@@ -20,6 +20,7 @@ namespace MobileTemplate.Droid.Test.Device
 
             //AddTestAssembly(typeof(PortableTests).Assembly);
             AddTestAssembly(typeof(CoreUnitTestsEntryPoint).Assembly);
+            AddTestAssembly(typeof(DroidUnitTestsEntryPoint).Assembly);
             // or in any assembly that you load (since JIT is available)
 
 #if false
