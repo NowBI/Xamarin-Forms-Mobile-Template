@@ -6,9 +6,9 @@
     <ProjectGuid>{390D0A01-D55A-42EA-8513-A19C78AC524E}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MobileTemplate.iOS.Test</RootNamespace>
+    <RootNamespace>MobileTemplate.iOS.Test.Device</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>MobileTemplate.iOS.Test</AssemblyName>
+    <AssemblyName>MobileTemplate.iOS.Test.Device</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>

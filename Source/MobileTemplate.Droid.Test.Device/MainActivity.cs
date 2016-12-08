@@ -5,7 +5,7 @@ using MobileTemplate.Core.Test;
 using Xunit.Runners.UI;
 using Xunit.Sdk;
 
-namespace MobileTemplate.Droid.Test
+namespace MobileTemplate.Droid.Test.Device
 {
     [Activity(Label = "MobileTemplate.Droid.Test", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : RunnerActivity

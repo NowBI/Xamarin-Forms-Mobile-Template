@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.Droid", "Sou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.iOS", "Source\MobileTemplate.iOS\MobileTemplate.iOS.csproj", "{388060D8-CFA7-49C4-8DAB-FAA853603F7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.iOS.Test", "Source\MobileTemplate.iOS.Test\MobileTemplate.iOS.Test.csproj", "{390D0A01-D55A-42EA-8513-A19C78AC524E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.iOS.Test.Device", "Source\MobileTemplate.iOS.Test.Device\MobileTemplate.iOS.Test.Device.csproj", "{390D0A01-D55A-42EA-8513-A19C78AC524E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.Droid.Test", "Source\MobileTemplate.Droid.Test\MobileTemplate.Droid.Test.csproj", "{9C9D2097-B3CC-411F-B123-B9321607AEC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.Droid.Test.Device", "Source\MobileTemplate.Droid.Test.Device\MobileTemplate.Droid.Test.Device.csproj", "{9C9D2097-B3CC-411F-B123-B9321607AEC2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.Core.Test", "Source\MobileTemplate.Core.Test\MobileTemplate.Core.Test.csproj", "{EB9FB050-491F-4BCF-81BC-3B7615286EBA}"
 EndProject

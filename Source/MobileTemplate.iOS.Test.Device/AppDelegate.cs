@@ -5,7 +5,7 @@ using UIKit;
 using Xunit.Runner;
 using Xunit.Sdk;
 
-namespace MobileTemplate.iOS.Test
+namespace MobileTemplate.iOS.Test.Device
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
