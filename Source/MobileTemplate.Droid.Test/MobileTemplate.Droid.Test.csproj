@@ -81,6 +81,10 @@
       <Project>{a7439e6b-2866-48f4-a696-85cc20a99f9e}</Project>
       <Name>MobileTemplate.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MobileTemplate.Droid\MobileTemplate.Droid.csproj">
+      <Project>{0c5cf1b3-1f8e-4edd-af0c-5d9db6497a94}</Project>
+      <Name>MobileTemplate.Droid</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

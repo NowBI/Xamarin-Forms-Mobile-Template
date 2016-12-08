@@ -81,6 +81,10 @@
       <Project>{a7439e6b-2866-48f4-a696-85cc20a99f9e}</Project>
       <Name>MobileTemplate.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MobileTemplate.iOS\MobileTemplate.iOS.csproj">
+      <Project>{388060d8-cfa7-49c4-8dab-faa853603f7c}</Project>
+      <Name>MobileTemplate.iOS</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
