@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -7,6 +8,7 @@ namespace MobileTemplate.Core.Services
 {
     public interface INavigationService
     {
+        IReadOnlyList<Page> NavigationStack { get; }
         Task Push(Page page, bool animated = true);
         Task<Page> Pop(bool animated = true);
         Task PopToRoot(bool animated = true);
@@ -15,6 +17,8 @@ namespace MobileTemplate.Core.Services
 
     public class NavigationService : INavigationService
     {
+        public IReadOnlyList<Page> NavigationStack => GetNavigationPage().Navigation.NavigationStack;
+
         public Task Push(Page page, bool animated = true)
         {
             return GetNavigationPage().PushAsync(page, animated);
