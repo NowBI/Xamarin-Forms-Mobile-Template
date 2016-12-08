@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace MobileTemplate.iOS.Test.Device
+namespace MobileTemplate.iOS.Test
 {
     public class Application
     {

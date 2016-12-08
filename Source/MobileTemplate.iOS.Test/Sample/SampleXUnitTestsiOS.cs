@@ -2,7 +2,7 @@
 
 namespace MobileTemplate.iOS.Test.Sample
 {
-    public class SampleXunitiOSTests
+    public class SampleXunitTests
     {
         [Fact]
         public void PassediOSTest()

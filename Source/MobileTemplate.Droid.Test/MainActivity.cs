@@ -5,7 +5,7 @@ using MobileTemplate.Core.Test;
 using Xunit.Runners.UI;
 using Xunit.Sdk;
 
-namespace MobileTemplate.Droid.Test.Device
+namespace MobileTemplate.Droid.Test
 {
     [Activity(Label = "MobileTemplate.Droid.Test", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : RunnerActivity
@@ -20,7 +20,6 @@ namespace MobileTemplate.Droid.Test.Device
 
             //AddTestAssembly(typeof(PortableTests).Assembly);
             AddTestAssembly(typeof(CoreUnitTestsEntryPoint).Assembly);
-            AddTestAssembly(typeof(DroidUnitTestsEntryPoint).Assembly);
             // or in any assembly that you load (since JIT is available)
 
 #if false

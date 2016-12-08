@@ -5,7 +5,7 @@ using UIKit;
 using Xunit.Runner;
 using Xunit.Sdk;
 
-namespace MobileTemplate.iOS.Test.Device
+namespace MobileTemplate.iOS.Test
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 
@@ -33,7 +33,6 @@ namespace MobileTemplate.iOS.Test.Device
             // become part of the app bundle
             //AddTestAssembly(typeof(PortableTests).Assembly);
             AddTestAssembly(typeof(CoreUnitTestsEntryPoint).Assembly);
-            AddTestAssembly(typeof(iOSUnitTestsEntryPoint).Assembly);
 
 #if false
 			// you can use the default or set your own custom writer (e.g. save to web site and tweet it ;-)
