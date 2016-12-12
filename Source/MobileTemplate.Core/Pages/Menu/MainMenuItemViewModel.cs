@@ -1,4 +1,5 @@
 ﻿using System;
+using MobileTemplate.Core.Model.Menu;
 using MobileTemplate.Core.Services;
 using Reactive.Bindings;
 
@@ -12,7 +13,7 @@ namespace MobileTemplate.Core.Pages.Menu
 
         private readonly IDisposable _tappedSubscription;
 
-        public MainMenuItemViewModel(MenuItemViewModel viewModel, INavigationService navigationService)
+        public MainMenuItemViewModel(MenuItemModel viewModel, INavigationService navigationService)
         {
             Title = viewModel.Title.ToReadOnlyReactiveProperty();
             ImageSource = viewModel.ImageSource.ToReadOnlyReactiveProperty();

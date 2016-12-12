@@ -1,56 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using MobileTemplate.Core.Model.Menu;
 using MobileTemplate.Core.Pages.Landing;
 using MobileTemplate.Core.Pages.ReactiveSample;
 using MobileTemplate.Core.Pages.ServiceSample;
 using Reactive.Bindings;
-using Xamarin.Forms;
 
 namespace MobileTemplate.Core.Services
 {
     public interface IMenuItemService
     {
-        IReadOnlyReactiveProperty<IEnumerable<MenuItemViewModel>> MenuItems { get; }
+        IReadOnlyReactiveProperty<IEnumerable<MenuItemModel>> MenuItems { get; }
     }
 
     public class MenuItemService : IMenuItemService
     {
-        private readonly IReactiveProperty<IEnumerable<MenuItemViewModel>> _menuItemsInternal;
-        public IReadOnlyReactiveProperty<IEnumerable<MenuItemViewModel>> MenuItems { get; }
+        private readonly IReactiveProperty<IEnumerable<MenuItemModel>> _menuItemsInternal;
+        public IReadOnlyReactiveProperty<IEnumerable<MenuItemModel>> MenuItems { get; }
 
         public MenuItemService()
         {
             var items = new[]
             {
-                new MenuItemViewModel("Home Sample", "icon.png", () => new LandingPage()),
-                new MenuItemViewModel("Content Sample", "icon.png", () => new LandingPage()),
-                new MenuItemViewModel("List Sample", "icon.png", () => new LandingPage()),
-                new MenuItemViewModel("Shop Sample", "icon.png", () => new LandingPage()),
-                new MenuItemViewModel("Service Sample", "icon.png", () => new ServiceSamplePage()),
-                new MenuItemViewModel("Reactive Sample", "icon.png", () => new ReactiveSamplePage())
+                new MenuItemModel("Home Sample", "icon.png", () => new LandingPage()),
+                new MenuItemModel("Content Sample", "icon.png", () => new LandingPage()),
+                new MenuItemModel("List Sample", "icon.png", () => new LandingPage()),
+                new MenuItemModel("Shop Sample", "icon.png", () => new LandingPage()),
+                new MenuItemModel("Service Sample", "icon.png", () => new ServiceSamplePage()),
+                new MenuItemModel("Reactive Sample", "icon.png", () => new ReactiveSamplePage())
             };
-            _menuItemsInternal = new ReactiveProperty<IEnumerable<MenuItemViewModel>>(items);
+            _menuItemsInternal = new ReactiveProperty<IEnumerable<MenuItemModel>>(items);
             MenuItems = _menuItemsInternal.ToReadOnlyReactiveProperty();
-        }
-    }
-
-    public class MenuItemViewModel : IDisposable
-    {
-        public IReactiveProperty<string> ImageSource { get; }
-        public IReactiveProperty<string> Title { get; }
-        public Func<Page> CreatePage { get; }
-
-        public MenuItemViewModel(string title, string imageSource, Func<Page> createPage)
-        {
-            Title = new ReactiveProperty<string>(title);
-            ImageSource = new ReactiveProperty<string>(imageSource);
-            CreatePage = createPage;
-        }
-
-        public void Dispose()
-        {
-            ImageSource?.Dispose();
-            Title?.Dispose();
         }
     }
 }

@@ -38,6 +38,7 @@
     <Compile Include="App.cs" />
     <Compile Include="Extensions\DisposalExtensions.cs" />
     <Compile Include="IoC.cs" />
+    <Compile Include="Model\Menu\MenuItemModel.cs" />
     <Compile Include="Pages\Landing\LandingPage.cs" />
     <Compile Include="Pages\Landing\LandingMenuItemButton.xaml.cs">
       <DependentUpon>LandingMenuItemButton.xaml</DependentUpon>
