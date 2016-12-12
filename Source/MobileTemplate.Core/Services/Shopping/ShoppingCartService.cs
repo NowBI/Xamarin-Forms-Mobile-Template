@@ -40,22 +40,27 @@ namespace MobileTemplate.Core.Services.Shopping
 
         public void AddItem(ShoppingItemModel item, int quantity = 1)
         {
-            AdjustItem(item, quantity);
+            AdjustItemCount(item, quantity);
         }
 
         public void RemoveItem(ShoppingItemModel item, int quantity = Int32.MaxValue)
         {
-            AdjustItem(item, quantity * -1);
+            AdjustItemCount(item, quantity * -1);
         }
 
-        private void AdjustItem(ShoppingItemModel item, int quantity)
+        private void AdjustItemCount(ShoppingItemModel item, int quantity)
         {
             var count = 0;
             _cart.TryGetValue(item, out count);
             count += quantity;
-            if (count > 0)
+            SetItemCount(item, count);
+        }
+
+        private void SetItemCount(ShoppingItemModel item, int quantity)
+        {
+            if (quantity > 0)
             {
-                _cart[item] = count;
+                _cart[item] = quantity;
             }
             else
             {
@@ -63,7 +68,7 @@ namespace MobileTemplate.Core.Services.Shopping
             }
             _itemsSubject.OnNext(_cart);
         }
-
+        
         public void ClearCart()
         {
             _cart.Clear();
