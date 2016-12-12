@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ScrollView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileTemplate.Core.Pages.Landing.LandingView">
-    <StackLayout>
-        <Image Source="Icon.png" HorizontalOptions="Center" />
+    <StackLayout Padding="6">
+        <Image Source="nbi_logo.png" HorizontalOptions="Center" Margin="32" />
         <Label>
             <Label.Text>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio sem, tempor laoreet orci ac, tempor volutpat odio. Aliquam in tortor libero. Mauris eget nibh dolor. Praesent varius pretium erat, at ullamcorper eros molestie sed. Curabitur vel tortor ac lacus pellentesque rhoncus. Aliquam ante magna, egestas non elementum nec, eleifend in urna. Quisque justo neque, imperdiet ut tellus vitae, imperdiet rutrum ligula.
