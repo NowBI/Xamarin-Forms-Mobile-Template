@@ -2,9 +2,9 @@
 using MobileTemplate.Core.Services;
 using Reactive.Bindings;
 
-namespace MobileTemplate.Core.Pages.Menu
+namespace MobileTemplate.Core.Pages.Landing
 {
-    public class MainMenuItemViewModel : IDisposable
+    public class LandingMenuItemViewModel : IDisposable
     {
         public IReadOnlyReactiveProperty<string> ImageSource { get; }
         public IReadOnlyReactiveProperty<string> Title { get; }
@@ -12,12 +12,12 @@ namespace MobileTemplate.Core.Pages.Menu
 
         private readonly IDisposable _tappedSubscription;
 
-        public MainMenuItemViewModel(MenuItemViewModel viewModel, INavigationService navigationService)
+        public LandingMenuItemViewModel(MenuItemViewModel viewModel, INavigationService navigationService)
         {
             Title = viewModel.Title.ToReadOnlyReactiveProperty();
             ImageSource = viewModel.ImageSource.ToReadOnlyReactiveProperty();
             Tapped = new ReactiveCommand();
-            _tappedSubscription = Tapped.Subscribe((x) => { navigationService.ResetStack(viewModel.CreatePage.Invoke()); });
+            _tappedSubscription = Tapped.Subscribe((x) => { navigationService.Push(viewModel.CreatePage.Invoke()); });
         }
 
         public void Dispose()

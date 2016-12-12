@@ -39,9 +39,15 @@
     <Compile Include="Extensions\DisposalExtensions.cs" />
     <Compile Include="IoC.cs" />
     <Compile Include="Pages\Landing\LandingPage.cs" />
+    <Compile Include="Pages\Landing\LandingMenuItemButton.xaml.cs">
+      <DependentUpon>LandingMenuItemButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Landing\LandingPageViewModel.cs" />
     <Compile Include="Pages\Landing\LandingView.xaml.cs">
       <DependentUpon>LandingView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Landing\LandingMenuItemViewModel.cs" />
+    <Compile Include="Pages\Menu\MainMenuItemViewModel.cs" />
     <Compile Include="Pages\Menu\MainMenuPage.cs" />
     <Compile Include="Pages\Menu\MainMenuItemView.xaml.cs">
       <DependentUpon>MainMenuItemView.xaml</DependentUpon>
@@ -50,7 +56,6 @@
     <Compile Include="Pages\Menu\MainMenuView.xaml.cs">
       <DependentUpon>MainMenuView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Menu\MainMenuItemViewModel.cs" />
     <Compile Include="Pages\Menu\MainMenuViewModel.cs" />
     <Compile Include="Pages\ReactiveSample\ReactiveSamplePage.cs" />
     <Compile Include="Pages\ReactiveSample\ReactiveSampleView.xaml.cs">
@@ -136,6 +141,12 @@
     <EmbeddedResource Include="Pages\ServiceSample\ServiceSampleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Landing\LandingMenuItemButton.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

@@ -12,7 +12,8 @@ namespace MobileTemplate.Core.Pages.Menu
             Content = new MainMenuView();
 
             var menuItemService = IoC.Container.Resolve<IMenuItemService>();
-            BindingContext = new MainMenuViewModel("Main Menu", "Copyright 2016 NBI", menuItemService);
+            var navigationService = IoC.Container.Resolve<INavigationService>();
+            BindingContext = new MainMenuViewModel("Main Menu", "Copyright 2016 NBI", menuItemService, navigationService);
         }
     }
 }

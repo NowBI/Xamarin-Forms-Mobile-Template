@@ -9,6 +9,7 @@ namespace MobileTemplate.Core
         {
             // The root page of your application
             MainPage = new MasterDetailWrapper();
+
         }
 
         protected override void OnStart()
