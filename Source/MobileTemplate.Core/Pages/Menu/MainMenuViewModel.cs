@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using MobileTemplate.Core.Services;
 using Reactive.Bindings;
 
 namespace MobileTemplate.Core.Pages.Menu
@@ -8,13 +10,13 @@ namespace MobileTemplate.Core.Pages.Menu
     {
         public IReactiveProperty<string> HeaderText { get; }
         public IReactiveProperty<string> FooterText { get; }
-        public IReactiveProperty<IEnumerable<MainMenuItemViewModel>> MenuItems { get; }
+        public IReadOnlyReactiveProperty<IEnumerable<MainMenuItemViewModel>> MenuItems { get; }
 
-        public MainMenuViewModel(string headerText, string footerText, IEnumerable<MainMenuItemViewModel> menuItems)
+        public MainMenuViewModel(string headerText, string footerText, IMenuItemService menuItemService)
         {
             HeaderText = new ReactiveProperty<string>(headerText);
             FooterText = new ReactiveProperty<string>(footerText);
-            MenuItems = new ReactiveProperty<IEnumerable<MainMenuItemViewModel>>(menuItems);
+            MenuItems = menuItemService.MenuItems.ToReadOnlyReactiveProperty(Enumerable.Empty<MainMenuItemViewModel>());
         }
 
         public void Dispose()

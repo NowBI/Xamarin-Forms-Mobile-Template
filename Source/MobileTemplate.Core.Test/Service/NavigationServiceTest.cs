@@ -16,7 +16,7 @@ namespace MobileTemplate.Core.Test.Service
             _navigationService = new MockNavigationService();
         }
 
-        [Fact]
+        [Fact]  
         public async void Push_ShouldPutPageAtTopOfStack()
         {
             var page = new ContentPage { Title = "Test Page" };

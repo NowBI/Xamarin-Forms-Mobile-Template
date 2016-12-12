@@ -17,6 +17,7 @@ namespace MobileTemplate.Core
             // -- Add your shared injected services here.
             // builder.RegisterType<Class>().As<IInterface>().SingleInstance();
             builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
+            builder.RegisterType<MenuItemService>().As<IMenuItemService>().SingleInstance();
         }
     }
 }

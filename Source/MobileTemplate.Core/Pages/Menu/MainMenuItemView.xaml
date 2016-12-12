@@ -3,6 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileTemplate.Core.Pages.Menu.MainMenuItemView"
              Orientation="Horizontal" VerticalOptions="CenterAndExpand">
-    <Image Source="{Binding ImageSource.Value}" WidthRequest="32" HorizontalOptions="Center" VerticalOptions="Center" />
+    <Image Source="{Binding ImageSource.Value}" WidthRequest="32" HorizontalOptions="Center" VerticalOptions="Center" Margin="4,0,0,0" />
     <Label Text="{Binding Title.Value}" VerticalOptions="Center" />
 </StackLayout>
