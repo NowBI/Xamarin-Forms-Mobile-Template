@@ -39,6 +39,7 @@
     <Compile Include="Extensions\DisposalExtensions.cs" />
     <Compile Include="IoC.cs" />
     <Compile Include="Model\Menu\MenuItemModel.cs" />
+    <Compile Include="Model\Shopping\ShoppingItemModel.cs" />
     <Compile Include="Pages\Landing\LandingPage.cs" />
     <Compile Include="Pages\Landing\LandingMenuItemButton.xaml.cs">
       <DependentUpon>LandingMenuItemButton.xaml</DependentUpon>
@@ -72,6 +73,8 @@
     <Compile Include="Services\MenuItemService.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\SampleService.cs" />
+    <Compile Include="Services\Shopping\ShoppingCartService.cs" />
+    <Compile Include="Services\Shopping\ShoppingItemService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
