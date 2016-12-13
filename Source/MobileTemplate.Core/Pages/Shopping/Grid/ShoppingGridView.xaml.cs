@@ -18,13 +18,11 @@ namespace MobileTemplate.Core.Pages.Shopping.Grid
             InitializeComponent();
 
             var shoppingItemService = IoC.Container.Resolve<IShoppingItemService>();
-            var shoppingCartService = IoC.Container.Resolve<IShoppingCartService>();
             var navigationService = IoC.Container.Resolve<INavigationService>();
 
-            var viewModel = new ShoppingViewModel(shoppingItemService, shoppingCartService, navigationService);
+            var viewModel = new ShoppingViewModel(shoppingItemService, navigationService);
             BindingContext = viewModel;
             _subviewSubscription = viewModel.ShoppingItems.Subscribe(UpdateSubviews);
-            BindingContext = viewModel;
         }
 
         private void UpdateSubviews(IEnumerable<ShoppingItemViewModel> viewModels)

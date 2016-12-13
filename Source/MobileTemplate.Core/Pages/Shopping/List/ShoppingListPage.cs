@@ -14,12 +14,11 @@ namespace MobileTemplate.Core.Pages.Shopping.List
             Title = "Shopping List Sample";
 
             var shoppingItemService = IoC.Container.Resolve<IShoppingItemService>();
-            var shoppingCartService = IoC.Container.Resolve<IShoppingCartService>();
             var navigationService = IoC.Container.Resolve<INavigationService>();
 
             Content = new ShoppingListView(navigationService);
 
-            BindingContext = new ShoppingViewModel(shoppingItemService, shoppingCartService, navigationService);
+            BindingContext = new ShoppingViewModel(shoppingItemService, navigationService);
         }
 
         public void Dispose()

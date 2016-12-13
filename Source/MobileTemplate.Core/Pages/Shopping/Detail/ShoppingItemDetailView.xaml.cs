@@ -4,7 +4,7 @@ using Xamarin.Forms;
 
 namespace MobileTemplate.Core.Pages.Shopping.Detail
 {
-    public partial class ShoppingItemDetailView : ScrollView, IDisposable
+    public partial class ShoppingItemDetailView : StackLayout, IDisposable
     {
         public ShoppingItemDetailView()
         {
@@ -13,7 +13,7 @@ namespace MobileTemplate.Core.Pages.Shopping.Detail
 
         public void Dispose()
         {
-            this.DisposeContent();
+            this.DisposeChildren();
             this.DisposeBindingContext();
         }
     }
