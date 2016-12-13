@@ -20,6 +20,6 @@
     <Label Text="{Binding Name.Value}" VerticalOptions="Center" Grid.Row="1" Grid.Column="0" FontAttributes="Bold"/>
     <Label Text="{Binding PriceLabel.Value}" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End"
            VerticalOptions="Center" Grid.Row="1" Grid.Column="1" />
-    <Label Text="{Binding Description.Value}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Aqua"/>
+    <Label Text="{Binding Description.Value}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="StartAndExpand"/>
     <BoxView BackgroundColor="#33000000" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
 </Grid>
