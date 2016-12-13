@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileTemplate.Core.Pages.Shopping.List.ShoppingItemListView"
+             Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+    <Image Source="{Binding Icon.Value}" WidthRequest="32" HorizontalOptions="Center" VerticalOptions="Center" Margin="4,0,0,0" />
+    <Label Text="{Binding Name.Value}" VerticalOptions="Center" />
+    <Label Text="{Binding PriceLabel.Value}" HorizontalOptions="End" HorizontalTextAlignment="End" VerticalOptions="Center" />
+</StackLayout>

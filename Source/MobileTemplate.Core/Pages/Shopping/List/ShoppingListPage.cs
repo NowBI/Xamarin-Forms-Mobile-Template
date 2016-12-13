@@ -5,18 +5,19 @@ using MobileTemplate.Core.Services;
 using MobileTemplate.Core.Services.Shopping;
 using Xamarin.Forms;
 
-namespace MobileTemplate.Core.Pages.Shopping
+namespace MobileTemplate.Core.Pages.Shopping.List
 {
-    public class ShoppingCartPage : ContentPage, IDisposable
+    public class ShoppingListPage : ContentPage, IDisposable
     {
-        public ShoppingCartPage()
+        public ShoppingListPage()
         {
-            Title = "Shopping Cart Sample";
+            Title = "Shopping List Sample";
             Content = new ShoppingListView();
 
+            var shoppingItemService = IoC.Container.Resolve<IShoppingItemService>();
             var shoppingCartService = IoC.Container.Resolve<IShoppingCartService>();
             var navigationService = IoC.Container.Resolve<INavigationService>();
-            BindingContext = new ShoppingCartViewModel(shoppingCartService, navigationService);
+            BindingContext = new ShoppingViewModel(shoppingItemService, shoppingCartService, navigationService);
         }
 
         public void Dispose()

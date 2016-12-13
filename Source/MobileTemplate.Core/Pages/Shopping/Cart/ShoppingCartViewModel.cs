@@ -2,7 +2,7 @@
 using MobileTemplate.Core.Services;
 using MobileTemplate.Core.Services.Shopping;
 
-namespace MobileTemplate.Core.Pages.Shopping
+namespace MobileTemplate.Core.Pages.Shopping.Cart
 {
     public class ShoppingCartViewModel : IDisposable
     {

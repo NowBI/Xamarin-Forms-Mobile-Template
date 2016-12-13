@@ -4,6 +4,9 @@ using MobileTemplate.Core.Pages.Landing;
 using MobileTemplate.Core.Pages.ReactiveSample;
 using MobileTemplate.Core.Pages.ServiceSample;
 using MobileTemplate.Core.Pages.Shopping;
+using MobileTemplate.Core.Pages.Shopping.Cart;
+using MobileTemplate.Core.Pages.Shopping.Grid;
+using MobileTemplate.Core.Pages.Shopping.List;
 using Reactive.Bindings;
 
 namespace MobileTemplate.Core.Services

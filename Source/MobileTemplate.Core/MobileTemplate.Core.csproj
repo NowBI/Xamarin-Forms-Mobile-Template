@@ -69,19 +69,31 @@
       <DependentUpon>ServiceSampleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ServiceSample\ServiceSampleViewModel.cs" />
-    <Compile Include="Pages\Shopping\ShoppingCartPage.cs" />
-    <Compile Include="Pages\Shopping\ShoppingGridView.xaml.cs">
+    <Compile Include="Pages\Shopping\Detail\ShoppingItemDetailPage.cs" />
+    <Compile Include="Pages\Shopping\Detail\ShoppingItemDetailViewModel.cs" />
+    <Compile Include="Pages\Shopping\Detail\ShoppingItemDetailView.xaml.cs">
+      <DependentUpon>ShoppingItemDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shopping\List\ShoppingItemListView.xaml.cs">
+      <DependentUpon>ShoppingItemListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shopping\ShoppingBarView.xaml.cs">
+      <DependentUpon>ShoppingBarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shopping\Cart\ShoppingCartPage.cs" />
+    <Compile Include="Pages\Shopping\Grid\ShoppingGridView.xaml.cs">
       <DependentUpon>ShoppingGridView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Shopping\ShoppingListView.xaml.cs">
+    <Compile Include="Pages\Shopping\List\ShoppingItemListViewModel.cs" />
+    <Compile Include="Pages\Shopping\List\ShoppingListView.xaml.cs">
       <DependentUpon>ShoppingListView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Shopping\ShoppingCartView.xaml.cs">
+    <Compile Include="Pages\Shopping\Cart\ShoppingCartView.xaml.cs">
       <DependentUpon>ShoppingCartView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Shopping\ShoppingGridPage.cs" />
-    <Compile Include="Pages\Shopping\ShoppingListPage.cs" />
-    <Compile Include="Pages\Shopping\ShoppingCartViewModel.cs" />
+    <Compile Include="Pages\Shopping\Grid\ShoppingGridPage.cs" />
+    <Compile Include="Pages\Shopping\List\ShoppingListPage.cs" />
+    <Compile Include="Pages\Shopping\Cart\ShoppingCartViewModel.cs" />
     <Compile Include="Pages\Shopping\ShoppingViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\MenuItemService.cs" />
@@ -168,19 +180,38 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\Shopping\ShoppingCartView.xaml">
+    <EmbeddedResource Include="Pages\Shopping\Cart\ShoppingCartView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\Shopping\ShoppingListView.xaml">
+    <EmbeddedResource Include="Pages\Shopping\List\ShoppingListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\Shopping\ShoppingGridView.xaml">
+    <EmbeddedResource Include="Pages\Shopping\Grid\ShoppingGridView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Shopping\ShoppingBarView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Shopping\List\ShoppingItemListView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Shopping\Detail\ShoppingItemDetailView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
