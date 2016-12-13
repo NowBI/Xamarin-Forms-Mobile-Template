@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Reactive.Disposables;
-using System.Threading;
-using Microsoft.Reactive.Testing;
 using MobileTemplate.Core.Model.Shopping;
 using MobileTemplate.Core.Services.Shopping;
 using Xunit;
 
 namespace MobileTemplate.Core.Test.Service
 {
-    public class ShoppingCartServiceTest : ReactiveTest
+    public class ShoppingCartServiceTest
     {
         private readonly IShoppingCartService _shoppingCartService;
 
@@ -198,73 +195,39 @@ namespace MobileTemplate.Core.Test.Service
         [Fact]
         public void TotalItems_ShouldReflectCartContents()
         {
-            var testScheduler = new TestScheduler();
-            var testableObserver = testScheduler.CreateObserver<int>();
-
             var quantityA = 16;
-            testScheduler.Schedule(TimeSpan.FromTicks(10), (sched, span) =>
-            {
-                Assert.Empty(_shoppingCartService.Items.Value);
-                _shoppingCartService.AddItem(_shoppingItemA, quantityA);
-                Assert.NotEmpty(_shoppingCartService.Items.Value);
-                Assert.Equal(quantityA, _shoppingCartService.Items.Value[_shoppingItemA]);
-                return Disposable.Empty;
-            });
+            Assert.Empty(_shoppingCartService.Items.Value);
+            _shoppingCartService.AddItem(_shoppingItemA, quantityA);
+            Assert.NotEmpty(_shoppingCartService.Items.Value);
+            Assert.Equal(quantityA, _shoppingCartService.Items.Value[_shoppingItemA]);
+
 
             var quantityB = 12;
-            testScheduler.Schedule(TimeSpan.FromTicks(20), (sched, span) =>
-            {
-                _shoppingCartService.AddItem(_shoppingItemB, quantityB);
-                Assert.NotEmpty(_shoppingCartService.Items.Value);
-                Assert.Equal(quantityB, _shoppingCartService.Items.Value[_shoppingItemB]);
-                return Disposable.Empty;
-            });
-            
-            _shoppingCartService.TotalItems.Subscribe(testableObserver);
+            _shoppingCartService.AddItem(_shoppingItemB, quantityB);
+            Assert.NotEmpty(_shoppingCartService.Items.Value);
+            Assert.Equal(quantityB, _shoppingCartService.Items.Value[_shoppingItemB]);
 
-            testScheduler.AdvanceTo(30);
-
-            testableObserver.Messages.AssertEqual(
-                OnNext(0, 0),
-                OnNext(10, quantityA),
-                OnNext(20, quantityA + quantityB)
-                );
+            var quantityC = quantityA + quantityB;
+            Assert.Equal(quantityC, _shoppingCartService.TotalItems.Value);
         }
 
         [Fact]
         public void TotalValue_ShouldReflectCartContents()
         {
-            var testScheduler = new TestScheduler();
-            var testableObserver = testScheduler.CreateObserver<double>();
-
             var quantityA = 16;
-            testScheduler.Schedule(TimeSpan.FromTicks(10), (sched, span) =>
-            {
-                Assert.Empty(_shoppingCartService.Items.Value);
-                _shoppingCartService.AddItem(_shoppingItemA, quantityA);
-                Assert.NotEmpty(_shoppingCartService.Items.Value);
-                Assert.Equal(quantityA, _shoppingCartService.Items.Value[_shoppingItemA]);
-                return Disposable.Empty;
-            });
 
+            Assert.Empty(_shoppingCartService.Items.Value);
+            _shoppingCartService.AddItem(_shoppingItemA, quantityA);
+            Assert.NotEmpty(_shoppingCartService.Items.Value);
+            Assert.Equal(quantityA, _shoppingCartService.Items.Value[_shoppingItemA]);
+            
             var quantityB = 12;
-            testScheduler.Schedule(TimeSpan.FromTicks(20), (sched, span) =>
-            {
-                _shoppingCartService.AddItem(_shoppingItemB, quantityB);
-                Assert.NotEmpty(_shoppingCartService.Items.Value);
-                Assert.Equal(quantityB, _shoppingCartService.Items.Value[_shoppingItemB]);
-                return Disposable.Empty;
-            });
+            _shoppingCartService.AddItem(_shoppingItemB, quantityB);
+            Assert.NotEmpty(_shoppingCartService.Items.Value);
+            Assert.Equal(quantityB, _shoppingCartService.Items.Value[_shoppingItemB]);
+            var quantityC = (quantityA * _shoppingItemA.Price) + (quantityB * _shoppingItemB.Price);
 
-            _shoppingCartService.TotalValue.Subscribe(testableObserver);
-
-            testScheduler.AdvanceBy(30);
-
-            testableObserver.Messages.AssertEqual(
-                OnNext(0, 0.0),
-                OnNext(10, (quantityA * _shoppingItemA.Price)),
-                OnNext(20, (quantityA * _shoppingItemA.Price) + (quantityB * _shoppingItemB.Price))
-                );
+            Assert.Equal(quantityC, _shoppingCartService.TotalValue.Value);
         }
     }
 }
