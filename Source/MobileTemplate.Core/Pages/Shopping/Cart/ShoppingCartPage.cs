@@ -15,7 +15,7 @@ namespace MobileTemplate.Core.Pages.Shopping.Cart
             Title = "Shopping Cart Sample";
             var shoppingCartService = IoC.Container.Resolve<IShoppingCartService>();
             var navigationService = IoC.Container.Resolve<INavigationService>();
-            Content = new ShoppingListView(navigationService);
+            Content = new ShoppingCartView();
 
             BindingContext = new ShoppingCartViewModel(shoppingCartService, navigationService);
         }

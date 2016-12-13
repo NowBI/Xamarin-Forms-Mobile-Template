@@ -4,17 +4,17 @@ using Xamarin.Forms;
 
 namespace MobileTemplate.Core.Pages.Shopping.Cart
 {
-    public partial class ShoppingCartView : StackLayout, IDisposable
+    public partial class ShoppingCartItemView : StackLayout, IDisposable
     {
-        public ShoppingCartView()
+        public ShoppingCartItemView()
         {
             InitializeComponent();
         }
 
         public void Dispose()
         {
-            this.DisposeBindingContext();
             this.DisposeChildren();
+            this.DisposeBindingContext();
         }
     }
 }

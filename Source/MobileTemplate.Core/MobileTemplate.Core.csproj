@@ -69,6 +69,10 @@
       <DependentUpon>ServiceSampleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ServiceSample\ServiceSampleViewModel.cs" />
+    <Compile Include="Pages\Shopping\Cart\ShoppingCartItemViewModel.cs" />
+    <Compile Include="Pages\Shopping\Cart\ShoppingCartItemView.xaml.cs">
+      <DependentUpon>ShoppingCartItemView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Shopping\Detail\ShoppingItemDetailPage.cs" />
     <Compile Include="Pages\Shopping\Detail\ShoppingItemDetailViewModel.cs" />
     <Compile Include="Pages\Shopping\Detail\ShoppingItemDetailView.xaml.cs">
@@ -221,6 +225,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Shopping\Detail\ShoppingItemDetailView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Shopping\Cart\ShoppingCartItemView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
