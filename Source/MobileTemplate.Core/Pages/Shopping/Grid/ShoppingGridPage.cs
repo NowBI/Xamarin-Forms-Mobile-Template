@@ -13,11 +13,6 @@ namespace MobileTemplate.Core.Pages.Shopping.Grid
         {
             Title = "Shopping Grid Sample";
             Content = new ShoppingGridView();
-
-            var shoppingItemService = IoC.Container.Resolve<IShoppingItemService>();
-            var shoppingCartService = IoC.Container.Resolve<IShoppingCartService>();
-            var navigationService = IoC.Container.Resolve<INavigationService>();
-            BindingContext = new ShoppingViewModel(shoppingItemService, shoppingCartService, navigationService);
         }
 
         public void Dispose()

@@ -27,11 +27,11 @@ namespace MobileTemplate.Core.Pages.Landing
         
         private void UpdateSubviews(IEnumerable<LandingMenuItemViewModel> viewModels)
         {
-            NavigationGrid.Children.Clear();
+            NavigationStack.Children.Clear();
             foreach (var viewModel in viewModels)
             {
                 var view = new LandingMenuItemButton {BindingContext = viewModel};
-                NavigationGrid.Children.Add(view);
+                NavigationStack.Children.Add(view);
             }
         }
 

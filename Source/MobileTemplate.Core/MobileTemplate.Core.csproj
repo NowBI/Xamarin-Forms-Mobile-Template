@@ -74,8 +74,11 @@
     <Compile Include="Pages\Shopping\Detail\ShoppingItemDetailView.xaml.cs">
       <DependentUpon>ShoppingItemDetailView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Shopping\List\ShoppingItemListView.xaml.cs">
-      <DependentUpon>ShoppingItemListView.xaml</DependentUpon>
+    <Compile Include="Pages\Shopping\Grid\ShoppingItemGridItemView.xaml.cs">
+      <DependentUpon>ShoppingItemGridItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shopping\List\ShoppingListItemView.xaml.cs">
+      <DependentUpon>ShoppingListItemView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Shopping\ShoppingBarView.xaml.cs">
       <DependentUpon>ShoppingBarView.xaml</DependentUpon>
@@ -84,7 +87,7 @@
     <Compile Include="Pages\Shopping\Grid\ShoppingGridView.xaml.cs">
       <DependentUpon>ShoppingGridView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Shopping\List\ShoppingItemListViewModel.cs" />
+    <Compile Include="Pages\Shopping\ShoppingItemViewModel.cs" />
     <Compile Include="Pages\Shopping\List\ShoppingListView.xaml.cs">
       <DependentUpon>ShoppingListView.xaml</DependentUpon>
     </Compile>
@@ -204,12 +207,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\Shopping\List\ShoppingItemListView.xaml">
+    <EmbeddedResource Include="Pages\Shopping\List\ShoppingListItemView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Shopping\Grid\ShoppingItemGridItemView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Shopping\Detail\ShoppingItemDetailView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <StackLayout xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shopping="clr-namespace:MobileTemplate.Core.Pages.Shopping;assembly=MobileTemplate.Core"
-             x:Class="MobileTemplate.Core.Pages.Shopping.Grid.ShoppingGridView">
+             x:Class="MobileTemplate.Core.Pages.Shopping.Grid.ShoppingGridView"
+             Spacing="0">
     <shopping:ShoppingBarView />
-    <ListView />
+    <ScrollView>
+        <StackLayout x:Name="ItemStack" /> <!-- Population is handled in code: Xamarin does not support data templating for stack layouts. -->
+    </ScrollView>
 </StackLayout>

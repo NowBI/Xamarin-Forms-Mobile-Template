@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <StackLayout xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileTemplate.Core.Pages.Shopping.ShoppingBarView"
-             Orientation="Horizontal">
+             Orientation="Horizontal" BackgroundColor="#33000000">
     <Label Text="Cart" FontAttributes="Bold" VerticalOptions="Center" />
     <Label Text="{Binding TotalItemsLabel.Value}" VerticalOptions="Center" />
     <Label Text="{Binding TotalValueLabel.Value}" VerticalOptions="Center" />

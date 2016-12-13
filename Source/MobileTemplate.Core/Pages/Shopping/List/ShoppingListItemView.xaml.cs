@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace MobileTemplate.Core.Pages.Shopping.List
 {
-    public partial class ShoppingItemListView : StackLayout, IDisposable
+    public partial class ShoppingListItemView : StackLayout, IDisposable
     {
-        public ShoppingItemListView()
+        public ShoppingListItemView()
         {
             InitializeComponent();
         }

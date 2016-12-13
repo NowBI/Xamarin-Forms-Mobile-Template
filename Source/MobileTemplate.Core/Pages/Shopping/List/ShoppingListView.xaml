@@ -2,13 +2,14 @@
 <StackLayout xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shopping="clr-namespace:MobileTemplate.Core.Pages.Shopping;assembly=MobileTemplate.Core"
              xmlns:list="clr-namespace:MobileTemplate.Core.Pages.Shopping.List;assembly=MobileTemplate.Core"
-             x:Class="MobileTemplate.Core.Pages.Shopping.List.ShoppingListView">
+             x:Class="MobileTemplate.Core.Pages.Shopping.List.ShoppingListView"
+             Spacing="0">
     <shopping:ShoppingBarView VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
     <ListView ItemsSource="{Binding ShoppingItems.Value}" ItemTapped="ListView_OnItemTapped" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <list:ShoppingItemListView />
+                    <list:ShoppingListItemView />
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>

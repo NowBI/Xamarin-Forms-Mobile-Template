@@ -19,7 +19,7 @@ namespace MobileTemplate.Core.Pages.Shopping
         public ReactiveCommand ViewCommand { get; }
         private readonly IDisposable _viewSubscription;
 
-        public IReadOnlyReactiveProperty<IEnumerable<ShoppingItemListViewModel>> ShoppingItems { get; }
+        public IReadOnlyReactiveProperty<IEnumerable<ShoppingItemViewModel>> ShoppingItems { get; }
 
         public ShoppingViewModel(IShoppingItemService shoppingItemService, IShoppingCartService shoppingCartService, INavigationService navigationService)
         {
@@ -27,7 +27,7 @@ namespace MobileTemplate.Core.Pages.Shopping
 
             TotalItemsLabel = shoppingCartService.TotalItems.Select(x => $"Total Items: {x}").ToReadOnlyReactiveProperty();
             TotalValueLabel = shoppingCartService.TotalValue.Select(x => $"{x:C}").ToReadOnlyReactiveProperty();
-            ShoppingItems = shoppingItemService.Inventory.Select(x => x.Select(y => new ShoppingItemListViewModel(y, navigationService))).ToReadOnlyReactiveProperty(Enumerable.Empty<ShoppingItemListViewModel>());
+            ShoppingItems = shoppingItemService.Inventory.Select(x => x.Select(y => new ShoppingItemViewModel(y))).ToReadOnlyReactiveProperty(Enumerable.Empty<ShoppingItemViewModel>());
 
             ViewCommand = new ReactiveCommand();
             _viewSubscription = ViewCommand.Subscribe(ViewCart);

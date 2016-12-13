@@ -12,11 +12,13 @@ namespace MobileTemplate.Core.Pages.Shopping.List
         public ShoppingListPage()
         {
             Title = "Shopping List Sample";
-            Content = new ShoppingListView();
 
             var shoppingItemService = IoC.Container.Resolve<IShoppingItemService>();
             var shoppingCartService = IoC.Container.Resolve<IShoppingCartService>();
             var navigationService = IoC.Container.Resolve<INavigationService>();
+
+            Content = new ShoppingListView(navigationService);
+
             BindingContext = new ShoppingViewModel(shoppingItemService, shoppingCartService, navigationService);
         }
 

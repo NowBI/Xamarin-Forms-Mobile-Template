@@ -3,6 +3,6 @@
     <StackLayout Padding="6">
         <Image Source="{Binding Image.Value}" HorizontalOptions="Center" Margin="32" />
         <Label Text="{Binding Text.Value}" />
-        <StackLayout x:Name="NavigationGrid" /> <!-- Population is handled in code: Xamarin does not support data templating for stack layouts. -->
+        <StackLayout x:Name="NavigationStack" /> <!-- Population is handled in code: Xamarin does not support data templating for stack layouts. -->
     </StackLayout>
 </ScrollView>
