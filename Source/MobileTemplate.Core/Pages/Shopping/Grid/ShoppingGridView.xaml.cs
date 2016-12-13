@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace MobileTemplate.Core.Pages.Shopping.Grid
 {
-    public partial class ShoppingGridView : StackLayout
+    public partial class ShoppingGridView : StackLayout, IDisposable
     {
         private readonly IDisposable _subviewSubscription;
 
@@ -35,6 +35,11 @@ namespace MobileTemplate.Core.Pages.Shopping.Grid
                 var view = new ShoppingGridItemView { BindingContext = viewModel };
                 ItemStack.Children.Add(view);
             }
+        }
+
+        public void Dispose()
+        {
+            _subviewSubscription?.Dispose();
         }
     }
 }
