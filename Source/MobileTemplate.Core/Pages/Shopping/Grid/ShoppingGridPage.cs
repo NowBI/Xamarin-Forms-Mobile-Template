@@ -1,8 +1,5 @@
 ﻿using System;
-using Autofac;
 using MobileTemplate.Core.Extensions;
-using MobileTemplate.Core.Services;
-using MobileTemplate.Core.Services.Shopping;
 using Xamarin.Forms;
 
 namespace MobileTemplate.Core.Pages.Shopping.Grid

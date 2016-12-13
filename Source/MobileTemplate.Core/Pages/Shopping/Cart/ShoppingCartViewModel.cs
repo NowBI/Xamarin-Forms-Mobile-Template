@@ -14,6 +14,7 @@ namespace MobileTemplate.Core.Pages.Shopping.Cart
 
         public IReadOnlyReactiveProperty<string> TotalItemsLabel { get; }
         public IReadOnlyReactiveProperty<string> TotalValueLabel { get; }
+        public IReadOnlyReactiveProperty<bool> CheckoutEnabled { get; }
         public IReadOnlyReactiveProperty<IEnumerable<ShoppingCartItemViewModel>> CartItems { get; }
         public ReactiveCommand CheckoutCommand { get; }
         private readonly IDisposable _checkoutSubscription;
@@ -24,7 +25,8 @@ namespace MobileTemplate.Core.Pages.Shopping.Cart
 
             TotalItemsLabel = shoppingCartService.TotalItems.Select(x => $"Total Items: {x}").ToReadOnlyReactiveProperty();
             TotalValueLabel = shoppingCartService.TotalValue.Select(x => $"Total Cost: {x:C}").ToReadOnlyReactiveProperty();
-            CartItems = shoppingCartService.Items.Select(x => x.Select(y => new ShoppingCartItemViewModel(y.Key, y.Value, _navigationService))).ToReadOnlyReactiveProperty(Enumerable.Empty<ShoppingCartItemViewModel>());
+            CheckoutEnabled = shoppingCartService.TotalItems.Select(x => x > 0).ToReadOnlyReactiveProperty();
+            CartItems = shoppingCartService.Items.Select(x => x.Select(y => new ShoppingCartItemViewModel(y.Key, y.Value, shoppingCartService, _navigationService))).ToReadOnlyReactiveProperty(Enumerable.Empty<ShoppingCartItemViewModel>());
 
             CheckoutCommand = new ReactiveCommand();
             _checkoutSubscription = CheckoutCommand.Subscribe(Checkout);
@@ -32,7 +34,7 @@ namespace MobileTemplate.Core.Pages.Shopping.Cart
 
         private void Checkout(object param)
         {
-            _navigationService.Push(new ShoppingCartPage());
+            _navigationService.Push(new NotYetImplementedPage());
         }
 
         public void Dispose()

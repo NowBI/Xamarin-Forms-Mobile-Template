@@ -34,8 +34,8 @@ namespace MobileTemplate.Core.Services.Shopping
             _itemsSubject = new Subject<IDictionary<ShoppingItemModel, int>>();
 
             Items = _itemsSubject.ToReadOnlyReactiveProperty(new Dictionary<ShoppingItemModel, int>());
-            TotalItems = _itemsSubject.Select(x => x.Sum(y => y.Value)).ToReadOnlyReactiveProperty();
-            TotalValue = _itemsSubject.Select(x => x.Sum(y => y.Key.Price * y.Value)).ToReadOnlyReactiveProperty();
+            TotalItems = Items.Select(x => x.Sum(y => y.Value)).ToReadOnlyReactiveProperty();
+            TotalValue = Items.Select(x => x.Sum(y => y.Key.Price * y.Value)).ToReadOnlyReactiveProperty();
         }
 
         public void AddItem(ShoppingItemModel item, int quantity = 1)
@@ -66,13 +66,19 @@ namespace MobileTemplate.Core.Services.Shopping
             {
                 _cart.Remove(item);
             }
-            _itemsSubject.OnNext(_cart);
+            TriggerUpdate();
         }
         
         public void ClearCart()
         {
             _cart.Clear();
-            _itemsSubject.OnNext(_cart);
+            TriggerUpdate();
+        }
+
+        private void TriggerUpdate()
+        {
+            var cartClone = _cart.ToDictionary(x => x.Key, y => y.Value);
+            _itemsSubject.OnNext(cartClone);
         }
     }
 }

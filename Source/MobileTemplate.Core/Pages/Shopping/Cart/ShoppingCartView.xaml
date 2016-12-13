@@ -11,9 +11,9 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-    <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+    <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#11000000">
         <Label Text="{Binding TotalItemsLabel.Value}" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End"/>
         <Label Text="{Binding TotalValueLabel.Value}" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End"/>
-        <Button Text="Checkout" Command="{Binding CheckoutCommand}" HorizontalOptions="EndAndExpand" />
+        <Button Text="Checkout" Command="{Binding CheckoutCommand}" IsEnabled="{Binding CheckoutEnabled.Value}" HorizontalOptions="EndAndExpand" />
     </StackLayout>
 </StackLayout>

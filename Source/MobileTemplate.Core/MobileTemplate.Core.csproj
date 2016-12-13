@@ -59,6 +59,9 @@
       <DependentUpon>MainMenuView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Menu\MainMenuViewModel.cs" />
+    <Compile Include="Pages\NotYetImplementedPage.xaml.cs">
+      <DependentUpon>NotYetImplementedPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ReactiveSample\ReactiveSamplePage.cs" />
     <Compile Include="Pages\ReactiveSample\ReactiveSampleView.xaml.cs">
       <DependentUpon>ReactiveSampleView.xaml</DependentUpon>
@@ -231,6 +234,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\Shopping\Cart\ShoppingCartItemView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\NotYetImplementedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
