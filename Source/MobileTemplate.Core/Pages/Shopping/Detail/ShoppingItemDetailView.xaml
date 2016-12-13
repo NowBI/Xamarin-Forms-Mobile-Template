@@ -4,6 +4,24 @@
              x:Class="MobileTemplate.Core.Pages.Shopping.Detail.ShoppingItemDetailView">
     <shopping:ShoppingBarView />
     <ScrollView>
-        <Grid></Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding Icon.Value}" HorizontalOptions="Center" VerticalOptions="Center"
+                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+            <Label Text="{Binding Name.Value}" VerticalOptions="Center" Grid.Row="1" Grid.Column="0" FontAttributes="Bold"/>
+            <Label Text="{Binding PriceLabel.Value}" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End"
+                   VerticalOptions="Center" Grid.Row="1" Grid.Column="1" />
+            <Label Text="{Binding Description.Value}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="StartAndExpand"/>
+            <Button Text="Add to Cart" Command="{Binding AddToCartCommand}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="End" VerticalOptions="EndAndExpand" />
+        </Grid>
     </ScrollView>
 </StackLayout>
