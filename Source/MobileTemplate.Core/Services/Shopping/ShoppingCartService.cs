@@ -34,8 +34,8 @@ namespace MobileTemplate.Core.Services.Shopping
             _itemsSubject = new Subject<IDictionary<ShoppingItemModel, int>>();
 
             Items = _itemsSubject.ToReadOnlyReactiveProperty(new Dictionary<ShoppingItemModel, int>());
-            TotalItems = _itemsSubject.Select(x => x.Sum(y => y.Value)).ToReadOnlyReactiveProperty();
-            TotalValue = _itemsSubject.Select(x => x.Sum(y => y.Key.Price * y.Value)).ToReadOnlyReactiveProperty();
+            TotalItems = Items.Select(x => x.Sum(y => y.Value)).ToReadOnlyReactiveProperty();
+            TotalValue = Items.Select(x => x.Sum(y => y.Key.Price * y.Value)).ToReadOnlyReactiveProperty();
         }
 
         public void AddItem(ShoppingItemModel item, int quantity = 1)

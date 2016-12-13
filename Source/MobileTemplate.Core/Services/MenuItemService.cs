@@ -3,6 +3,7 @@ using MobileTemplate.Core.Model.Menu;
 using MobileTemplate.Core.Pages.Landing;
 using MobileTemplate.Core.Pages.ReactiveSample;
 using MobileTemplate.Core.Pages.ServiceSample;
+using MobileTemplate.Core.Pages.Shopping;
 using Reactive.Bindings;
 
 namespace MobileTemplate.Core.Services
@@ -23,8 +24,9 @@ namespace MobileTemplate.Core.Services
             {
                 new MenuItemModel("Home Sample", "icon.png", () => new LandingPage()),
                 new MenuItemModel("Content Sample", "icon.png", () => new LandingPage()),
-                new MenuItemModel("List Sample", "icon.png", () => new LandingPage()),
-                new MenuItemModel("Shop Sample", "icon.png", () => new LandingPage()),
+                new MenuItemModel("Shopping List Sample", "icon.png", () => new ShoppingListPage()),
+                new MenuItemModel("Shopping Grid Sample", "icon.png", () => new ShoppingGridPage()),
+                new MenuItemModel("Shopping Cart Sample", "icon.png", () => new ShoppingCartPage()),
                 new MenuItemModel("Service Sample", "icon.png", () => new ServiceSamplePage()),
                 new MenuItemModel("Reactive Sample", "icon.png", () => new ReactiveSamplePage())
             };
