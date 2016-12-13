@@ -5,5 +5,5 @@
              Orientation="Horizontal" VerticalOptions="CenterAndExpand">
     <Image Source="{Binding Icon.Value}" WidthRequest="32" HorizontalOptions="Center" VerticalOptions="Center" Margin="4,0,0,0" />
     <Label Text="{Binding Name.Value}" VerticalOptions="Center" />
-    <Label Text="{Binding PriceLabel.Value}" HorizontalOptions="End" HorizontalTextAlignment="End" VerticalOptions="Center" />
+    <Label Text="{Binding PriceLabel.Value}" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End" VerticalOptions="Center" />
 </StackLayout>

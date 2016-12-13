@@ -21,7 +21,7 @@ namespace MobileTemplate.Core.Pages.Shopping.List
         {
             Name = new ReactiveProperty<string>(source.Name);
             Icon = new ReactiveProperty<string>(source.Icon);
-            PriceLabel = new ReactiveProperty<string>($"${source.Price:C}");
+            PriceLabel = new ReactiveProperty<string>($"{source.Price:C}");
             ViewDetails = new ReactiveCommand();
             _viewDetailsSubscription = ViewDetails.Subscribe(OpenDetailPage);
             _navigationService = navigationService;

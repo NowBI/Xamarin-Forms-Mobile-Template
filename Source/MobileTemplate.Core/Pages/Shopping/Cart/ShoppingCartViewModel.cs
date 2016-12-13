@@ -17,7 +17,7 @@ namespace MobileTemplate.Core.Pages.Shopping.Cart
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+
         }
     }
 }

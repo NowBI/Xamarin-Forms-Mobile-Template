@@ -26,7 +26,7 @@ namespace MobileTemplate.Core.Pages.Shopping
             _navigationService = navigationService;
 
             TotalItemsLabel = shoppingCartService.TotalItems.Select(x => $"Total Items: {x}").ToReadOnlyReactiveProperty();
-            TotalValueLabel = shoppingCartService.TotalValue.Select(x => $"${x:C}").ToReadOnlyReactiveProperty();
+            TotalValueLabel = shoppingCartService.TotalValue.Select(x => $"{x:C}").ToReadOnlyReactiveProperty();
             ShoppingItems = shoppingItemService.Inventory.Select(x => x.Select(y => new ShoppingItemListViewModel(y, navigationService))).ToReadOnlyReactiveProperty(Enumerable.Empty<ShoppingItemListViewModel>());
 
             ViewCommand = new ReactiveCommand();

@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using MobileTemplate.Core.Services;
+using MobileTemplate.Core.Services.Shopping;
 
 namespace MobileTemplate.Core
 {
@@ -18,6 +19,9 @@ namespace MobileTemplate.Core
             // builder.RegisterType<Class>().As<IInterface>().SingleInstance();
             builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
             builder.RegisterType<MenuItemService>().As<IMenuItemService>().SingleInstance();
+
+            builder.RegisterType<ShoppingItemService>().As<IShoppingItemService>().SingleInstance();
+            builder.RegisterType<ShoppingCartService>().As<IShoppingCartService>().SingleInstance();
         }
     }
 }
