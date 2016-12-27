@@ -123,6 +123,7 @@
     <Compile Include="Service\AssetServiceTest.cs" />
     <Compile Include="Service\NavigationServiceTest.cs" />
     <Compile Include="Service\ShoppingCartServiceTest.cs" />
+    <Compile Include="ViewModel\ReactiveSample\ReactiveSampleViewModelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
