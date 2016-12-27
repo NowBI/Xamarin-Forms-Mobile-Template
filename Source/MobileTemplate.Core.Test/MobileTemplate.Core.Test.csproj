@@ -120,6 +120,7 @@
     <Compile Include="Mocks\MockNavigationService.cs" />
     <Compile Include="Sample\SampleXunitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AssetServiceTest.cs" />
     <Compile Include="Service\NavigationServiceTest.cs" />
     <Compile Include="Service\ShoppingCartServiceTest.cs" />
   </ItemGroup>
