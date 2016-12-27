@@ -2,14 +2,14 @@
 using MobileTemplate.Core.Extensions;
 using Xamarin.Forms;
 
-namespace MobileTemplate.Core.Pages.CopySample
+namespace MobileTemplate.Core.Pages.RendererSample
 {
-    public class CopySamplePage : ContentPage, IDisposable
+    public class RendererSamplePage : ContentPage, IDisposable
     {
-        public CopySamplePage()
+        public RendererSamplePage()
         {
-            Title = "Copy Sample";
-            Content = new CopySampleView();
+            Title = "Renderer Sample";
+            Content = new RendererSampleView();
         }
 
         public void Dispose()

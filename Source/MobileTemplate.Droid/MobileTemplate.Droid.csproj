@@ -115,6 +115,7 @@
   <ItemGroup>
     <Compile Include="IoCDroid.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renderers\CustomRendererSampleLabelRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\SampleServiceDroid.cs" />
