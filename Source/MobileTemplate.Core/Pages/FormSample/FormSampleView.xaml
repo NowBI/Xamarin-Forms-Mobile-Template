@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ScrollView xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:formSample="clr-namespace:MobileTemplate.Core.Pages.FormSample;assembly=MobileTemplate.Core"
+            x:Class="MobileTemplate.Core.Pages.FormSample.FormSampleView"
+            BackgroundColor="{Binding PickedColor.Value}">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="6*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <formSample:FormHeader Grid.Row="0" Grid.Column="0"
+                               Text="Entry:" />
+        <Entry Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+               Placeholder="Name" Text="{Binding EntryInput.Value}" />
+
+        <formSample:FormHeader Grid.Row="1" Grid.Column="0"
+                               Text="Slider:" />
+        <Slider Grid.Row="1" Grid.Column="1"
+                Minimum="0" Maximum="100" Value="{Binding SliderInput.Value}" />
+        <formSample:FormLabel Grid.Row="1" Grid.Column="2"
+                              Text="{Binding SliderInput.Value}" />
+
+        <formSample:FormHeader Grid.Row="2" Grid.Column="0"
+                               Text="Picker:" />
+        <Picker Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+                Title="Favorite Color" x:Name="ColorPicker"
+                SelectedIndex="{Binding PickerInput.Value}" />
+        <!-- No binding on the "Items" property so it must be done manually. See FormsSampleView.xaml.cs for details. -->
+
+        <formSample:FormHeader Grid.Row="3" Grid.Column="0"
+                               Text="Switch:" />
+        <Switch Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
+                IsToggled="{Binding SwitchInput.Value}" />
+
+        <formSample:FormHeader Grid.Row="4" Grid.Column="0"
+                               Text="Date Picker:" />
+        <DatePicker Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+                    Date="{Binding DatePickerInput.Value}" />
+
+        <formSample:FormHeader Grid.Row="5" Grid.Column="0"
+                               Text="Time Picker:" />
+        <TimePicker Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+                    Time="{Binding TimePickerInput.Value}" />
+
+        <formSample:FormHeader Grid.Row="6" Grid.Column="0"
+                               Text="Stepper:" />
+        <Stepper Grid.Row="6" Grid.Column="1"
+                 Minimum="0" Maximum="100" Increment="5" Value="{Binding StepperInput.Value}" />
+        <formSample:FormLabel Grid.Row="6" Grid.Column="2"
+                              Text="{Binding StepperInput.Value}" />
+
+        <BoxView Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" />
+
+        <Button Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3"
+                Text="Submit" Command="{Binding SubmitCommand}" />
+    </Grid>
+</ScrollView>
