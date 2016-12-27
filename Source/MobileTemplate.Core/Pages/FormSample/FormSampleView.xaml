@@ -9,7 +9,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="6*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -26,14 +26,14 @@
         <formSample:FormHeader Grid.Row="0" Grid.Column="0"
                                Text="Entry:" />
         <Entry Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
-               Placeholder="Name" Text="{Binding EntryInput.Value}" />
+               Text="{Binding EntryInput.Value}" />
 
         <formSample:FormHeader Grid.Row="1" Grid.Column="0"
                                Text="Slider:" />
         <Slider Grid.Row="1" Grid.Column="1"
                 Minimum="0" Maximum="100" Value="{Binding SliderInput.Value}" />
         <formSample:FormLabel Grid.Row="1" Grid.Column="2"
-                              Text="{Binding SliderInput.Value}" />
+                              Text="{Binding SliderInput.Value}" LineBreakMode="TailTruncation" />
 
         <formSample:FormHeader Grid.Row="2" Grid.Column="0"
                                Text="Picker:" />
@@ -62,7 +62,7 @@
         <Stepper Grid.Row="6" Grid.Column="1"
                  Minimum="0" Maximum="100" Increment="5" Value="{Binding StepperInput.Value}" />
         <formSample:FormLabel Grid.Row="6" Grid.Column="2"
-                              Text="{Binding StepperInput.Value}" />
+                              Text="{Binding StepperInput.Value}" LineBreakMode="TailTruncation" />
 
         <BoxView Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" />
 
