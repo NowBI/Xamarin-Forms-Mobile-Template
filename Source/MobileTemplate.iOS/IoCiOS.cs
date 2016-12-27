@@ -11,6 +11,7 @@ namespace MobileTemplate.iOS
             // -- Add your iOS-specific injected services here.
             // builder.RegisterType<Class>().As<IInterface>().SingleInstance();
             builder.RegisterType<SampleServiceiOS>().As<ISampleService>().SingleInstance();
+            builder.RegisterType<AssetServiceiOS>().As<IAssetService>().SingleInstance();
         }
     }
 }

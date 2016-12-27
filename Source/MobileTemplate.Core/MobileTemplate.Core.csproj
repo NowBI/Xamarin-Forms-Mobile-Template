@@ -41,6 +41,11 @@
     <Compile Include="IoC.cs" />
     <Compile Include="Model\Menu\MenuItemModel.cs" />
     <Compile Include="Model\Shopping\ShoppingItemModel.cs" />
+    <Compile Include="Pages\AssetSample\AssetSamplePage.cs" />
+    <Compile Include="Pages\AssetSample\AssetSampleView.xaml.cs">
+      <DependentUpon>AssetSampleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AssetSample\AssetSampleViewModel.cs" />
     <Compile Include="Pages\RendererSample\RendererSamplePage.cs" />
     <Compile Include="Pages\RendererSample\RendererSampleView.xaml.cs">
       <DependentUpon>RendererSampleView.xaml</DependentUpon>
@@ -123,6 +128,7 @@
     <Compile Include="Pages\Shopping\Cart\ShoppingCartViewModel.cs" />
     <Compile Include="Pages\Shopping\ShoppingViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AssetService.cs" />
     <Compile Include="Services\MenuItemService.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\SampleService.cs" />
@@ -274,6 +280,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\RendererSample\RendererSampleView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\AssetSample\AssetSampleView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

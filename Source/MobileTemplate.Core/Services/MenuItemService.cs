@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using MobileTemplate.Core.Model.Menu;
+using MobileTemplate.Core.Pages.AssetSample;
 using MobileTemplate.Core.Pages.CopySample;
 using MobileTemplate.Core.Pages.FormSample;
 using MobileTemplate.Core.Pages.Landing;
@@ -34,6 +35,7 @@ namespace MobileTemplate.Core.Services
                 new MenuItemModel("Shopping Grid Sample", "icon.png", () => new ShoppingGridPage()),
                 new MenuItemModel("Shopping Cart Sample", "icon.png", () => new ShoppingCartPage()),
                 new MenuItemModel("Service Sample", "icon.png", () => new ServiceSamplePage()),
+                new MenuItemModel("Assets Sample", "icon.png", () => new AssetSamplePage()),
                 new MenuItemModel("Custom Renderer Sample", "icon.png", () => new RendererSamplePage()),
                 new MenuItemModel("Reactive Sample", "icon.png", () => new ReactiveSamplePage())
             };

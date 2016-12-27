@@ -11,6 +11,7 @@ namespace MobileTemplate.Droid
             // -- Add your Android-specific injected services here.
             // builder.RegisterType<Class>().As<IInterface>().SingleInstance();
             builder.RegisterType<SampleServiceDroid>().As<ISampleService>().SingleInstance();
+            builder.RegisterType<AssetServiceDroid>().As<IAssetService>().SingleInstance();
         }
     }
 }
