@@ -40,6 +40,11 @@
     <Compile Include="IoC.cs" />
     <Compile Include="Model\Menu\MenuItemModel.cs" />
     <Compile Include="Model\Shopping\ShoppingItemModel.cs" />
+    <Compile Include="Pages\CopySample\CopySamplePage.cs" />
+    <Compile Include="Pages\CopySample\CopySampleView.xaml.cs">
+      <DependentUpon>CopySampleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CopySample\CopySampleViewModel.cs" />
     <Compile Include="Pages\FormSample\FormSamplePage.cs" />
     <Compile Include="Pages\FormSample\FormSampleView.xaml.cs">
       <DependentUpon>FormSampleView.xaml</DependentUpon>
@@ -251,6 +256,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\FormSample\FormSampleView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\CopySample\CopySampleView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
