@@ -2,13 +2,13 @@
 <ScrollView xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="MobileTemplate.Core.Pages.ServiceSample.ServiceSampleView">
-    <StackLayout>
-        <Label>
-            <Label.Text>
-                Click a button to pop open a new window based on what platform you're running.
-            </Label.Text>
-        </Label>
-        <Button Text="{Binding CommonServiceText.Value}" Command="{Binding CommonServiceCommand}"/>
-        <Button Text="{Binding PlatformServiceText.Value}" Command="{Binding PlatformServiceCommand}"/>
+    <StackLayout Padding="6">
+      <Label>
+        <Label.Text>
+          Click a button to pop open a new window based on what platform you're running.
+        </Label.Text>
+      </Label>
+      <Button Text="{Binding CommonServiceText.Value}" Command="{Binding CommonServiceCommand}"/>
+      <Button Text="{Binding PlatformServiceText.Value}" Command="{Binding PlatformServiceCommand}"/>
     </StackLayout>
 </ScrollView>

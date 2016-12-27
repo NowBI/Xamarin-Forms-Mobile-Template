@@ -2,10 +2,10 @@
 <ScrollView xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="MobileTemplate.Core.Pages.ReactiveSample.ReactiveSampleView">
-    <StackLayout>
-        <Entry Text="{Binding TextInput.Value}" Placeholder="Enter some Text" />
-        <Label Text="{Binding StringLengthLabel.Value}" />
-        <Label Text="{Binding FirstCharacterLabel.Value}" />
-        <Label Text="{Binding TimeOnPageLabel.Value}" />
+    <StackLayout Padding="6">
+      <Entry Text="{Binding TextInput.Value}" Placeholder="Enter some Text" />
+      <Label Text="{Binding StringLengthLabel.Value}" />
+      <Label Text="{Binding FirstCharacterLabel.Value}" />
+      <Label Text="{Binding TimeOnPageLabel.Value}" />
     </StackLayout>
 </ScrollView>

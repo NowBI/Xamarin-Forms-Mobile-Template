@@ -5,6 +5,6 @@
              Spacing="0">
     <shopping:ShoppingBarView />
     <ScrollView>
-        <StackLayout x:Name="ItemStack" /> <!-- Population is handled in code: Xamarin does not support data templating for stack layouts. -->
+        <StackLayout x:Name="ItemStack" Padding="6"/> <!-- Population is handled in code: Xamarin does not support data templating for stack layouts. -->
     </ScrollView>
 </StackLayout>

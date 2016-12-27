@@ -2,7 +2,8 @@
 <StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:menu="clr-namespace:MobileTemplate.Core.Pages.Menu;assembly=MobileTemplate.Core"
-             x:Class="MobileTemplate.Core.Pages.Menu.MainMenuView">
+             x:Class="MobileTemplate.Core.Pages.Menu.MainMenuView"
+             Padding="6">
     <Label Text="{Binding HeaderText.Value}" />
     <ListView ItemsSource="{Binding MenuItems.Value}" ItemTapped="ListView_OnItemTapped">
         <ListView.ItemTemplate>
