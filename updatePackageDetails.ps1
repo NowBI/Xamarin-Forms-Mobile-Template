@@ -1,6 +1,6 @@
 # This file will update the android manifests and info.plist files to new version and package names if needed.
 # This is a very handy tool for updating continuous integration stuff
-# 		Usage: "updatePackageDetails.bat versionNumber versionName <[packageName] [packageReplacement]>"
+# 		Usage: "updatePackageDetails.ps1 versionNumber versionName <[packageName] [packageReplacement]>"
 
 function Syntax {
 	Write-Host "Usage: 'updatePackageDetails.ps1 versionNumber versionName <[packageName] [packageReplacement]>'"
@@ -18,7 +18,15 @@ if ( $args.Length -eq 0  -or $args[0] -eq "/?" -or $args.Length -eq 1 -or $args.
 	}
 }
 
+function BackupFile($file) {
+	if( (Test-Path "$file.bak")){
+		Move-Item "$file.bak" "$file" -force;
+	}
+	Copy-Item "$file" "$file.bak";
+}
+
 function UpdateManifest($file){
+	BackupFile $file;
 	Write-Host "Updating $file";
 	[xml]$xml = Get-Content "$file";
 	$nodes = $xml.SelectNodes("/manifest");
@@ -44,6 +52,7 @@ function ReplaceNodeText($node, $find, $replace){
 }
 
 function UpdatePlist($file){
+	BackupFile $file;
 	Write-Host "Updating $file";
 	[xml]$xml = Get-Content "$file";
 	$nodes = $xml.SelectNodes("/plist/dict/key");
