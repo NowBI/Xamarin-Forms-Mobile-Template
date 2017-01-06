@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.nowintelligence.template" android:installLocation="auto" android:versionCode="000000" android:versionName="LOCAL_DEBUG">
-	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="MobileTemplate.Droid" android:icon="@drawable/nbi_logo"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.nowintelligence.template" android:installLocation="auto" android:versionCode="0" android:versionName="LOCAL_DEBUG">
+  <uses-sdk android:minSdkVersion="15" />
+  <application android:label="MobileTemplate.Droid" android:icon="@drawable/nbi_logo">
+  </application>
 </manifest>
