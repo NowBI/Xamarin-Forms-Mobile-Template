@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Autofac;
 using Foundation;
+using HockeyApp.iOS;
 using MobileTemplate.Core;
 using UIKit;
 
@@ -23,6 +24,7 @@ namespace MobileTemplate.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            RegisterHockeyApp();
             BuildIoCContainer();
 
             global::Xamarin.Forms.Forms.Init();
@@ -37,6 +39,15 @@ namespace MobileTemplate.iOS
             builder.RegisterCoreDependencies();
             builder.RegisteriOSDependencies();
             builder.Publish();
+        }
+
+        private void RegisterHockeyApp()
+        {
+            var manager = BITHockeyManager.SharedHockeyManager;
+            manager.Configure(MagicStrings.HockeyAppId);
+            manager.DisableFeedbackManager = true;
+            manager.DisableMetricsManager = true;
+            manager.StartManager();
         }
     }
 }

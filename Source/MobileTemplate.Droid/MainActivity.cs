@@ -2,7 +2,10 @@
 using Android.Content.PM;
 using Android.OS;
 using Autofac;
+using HockeyApp;
+using HockeyApp.Android;
 using MobileTemplate.Core;
+using CrashManager = HockeyApp.Android.CrashManager;
 
 namespace MobileTemplate.Droid
 {
@@ -16,10 +19,23 @@ namespace MobileTemplate.Droid
 
             base.OnCreate(bundle);
 
+            RegisterHockeyApp();
             BuildIoCContainer();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+        }
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+            UnregisterHockeyApp();
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            UnregisterHockeyApp();
         }
 
         private void BuildIoCContainer()
@@ -28,6 +44,17 @@ namespace MobileTemplate.Droid
             builder.RegisterCoreDependencies();
             builder.RegisterDroidDependencies();
             builder.Publish();
+        }
+
+        private void RegisterHockeyApp()
+        {
+            CrashManager.Register(this, MagicStrings.HockeyAppId);
+            UpdateManager.Register(this);
+        }
+
+        private void UnregisterHockeyApp()
+        {
+            UpdateManager.Unregister();
         }
     }
 }
