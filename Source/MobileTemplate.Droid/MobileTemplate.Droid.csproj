@@ -122,6 +122,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IoCDroid.cs" />
+    <Compile Include="MagicStringsDroid.Designer.cs">
+      <DependentUpon>MagicStringsDroid.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Renderers\CustomRendererSampleLabelRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -171,6 +176,13 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Text\asset_sample_text_file.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MagicStringsDroid.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MagicStringsDroid.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

@@ -44,7 +44,7 @@ namespace MobileTemplate.iOS
         private void RegisterHockeyApp()
         {
             var manager = BITHockeyManager.SharedHockeyManager;
-            manager.Configure(MagicStrings.HockeyAppId);
+            manager.Configure(MagicStringsiOS.HockeyAppId);
             manager.DisableFeedbackManager = true;
             manager.DisableMetricsManager = true;
             manager.StartManager();

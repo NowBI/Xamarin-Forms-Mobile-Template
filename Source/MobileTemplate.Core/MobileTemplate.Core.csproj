@@ -39,10 +39,10 @@
     <Compile Include="Controls\CustomRendererSampleLabel.cs" />
     <Compile Include="Extensions\DisposalExtensions.cs" />
     <Compile Include="IoC.cs" />
-    <Compile Include="MagicStrings.Designer.cs">
+    <Compile Include="MagicStringsCore.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MagicStrings.resx</DependentUpon>
+      <DependentUpon>MagicStringsCore.resx</DependentUpon>
     </Compile>
     <Compile Include="Model\Menu\MenuItemModel.cs" />
     <Compile Include="Model\Shopping\ShoppingItemModel.cs" />
@@ -186,9 +186,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MagicStrings.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>MagicStrings.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="MagicStringsCore.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MagicStringsCore.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Menu\MainMenuItemView.xaml">
