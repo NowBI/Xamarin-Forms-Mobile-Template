@@ -48,8 +48,11 @@ namespace MobileTemplate.Droid
 
         private void RegisterHockeyApp()
         {
-            CrashManager.Register(this, MagicStringsDroid.HockeyAppId);
-            UpdateManager.Register(this, MagicStringsDroid.HockeyAppId);
+            if (MagicStringsDroid.HockeyAppId?.Length == 32)
+            {
+                CrashManager.Register(this, MagicStringsDroid.HockeyAppId);
+                UpdateManager.Register(this, MagicStringsDroid.HockeyAppId);
+            }
         }
 
         private void UnregisterHockeyApp()
