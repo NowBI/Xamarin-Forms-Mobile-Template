@@ -59,6 +59,7 @@ function UpdatePlist($file){
 	foreach($node in $nodes) {
 		switch ($node.'#text') {
 			"CFBundleVersion" { SetNodeText $node.get_NextSibling() "$vName"; }
+			"CFBundleShortVersionString" { SetNodeText $node.get_NextSibling() "$vNumb"; }
 			"CFBundleIdentifier" { 
 				if( $pName -and $pRepl ){
 					ReplaceNodeText $node.get_NextSibling() "$pName" "$pRepl";
