@@ -18,7 +18,7 @@ Xamarin may throw a few red herring issues into your error box when you build. I
 
 The **MobileTemplate.Droid** project is configured to use the latest Android platform available to you, targeting Android 4.0.3 (API Level 15 - Ice Cream Sandwich). This can be adjusted to whichever settings you prefer by right-clicking the **MobileTemplate.Droid** project and hitting "Properties". In the "Application" tab dropdowns for changing these are available.
 
-To run the project on an Android device, simply set the Startup Project to **MobileTemplate.Droid** and the platform configuration to **ARM**. Your list of emulators and connected devices should populate the run button. Select the device you want to deploy to and hit run to begin.
+To run the project on an Android device, simply set the Startup Project to "MobileTemplate.Droid" and the platform configuration to "ARM". Your list of emulators and connected devices should populate the run button. Select the device you want to deploy to and hit run to begin.
 
 For more information, see [Deployment, Testing, and Metrics](https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/) on Xamarin's developer guide.
 
@@ -26,7 +26,7 @@ For more information, see [Deployment, Testing, and Metrics](https://developer.x
 
 To build and test iOS projects on a Windows machine, you must create and connect to a Mac build agent remotely. For a guide on doing so, please see [Connecting to the Mac](https://developer.xamarin.com/guides/ios/getting_started/installation/windows/connecting-to-mac/) on Xamarin's developer guide.
 
-Once you have created a Mac build agent, you can connect to it by navigating to "Tools > iOS > Xamarin Mac Agent" in Visual Studio and following the dialog boxes. When you have successfully linked to the agent, set the Startup Project to **MobileTemplate.iOS** and the platform configuration to **iPhoneSimulator**. Your list of available simulators should populate the run button. Select the device you want to deploy to and hit run to begin.
+Once you have created a Mac build agent, you can connect to it by navigating to "Tools > iOS > Xamarin Mac Agent" in Visual Studio and following the dialog boxes. When you have successfully linked to the agent, set the Startup Project to "MobileTemplate.iOS" and the platform configuration to "iPhoneSimulator". Your list of available simulators should populate the run button. Select the device you want to deploy to and hit run to begin.
 
 If you wish to deploy to actual devices, you must register an Apple Developer Account and create provisioning profiles for your project. See [Device Provisioning](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/) on Xamarin's developer site for an overview of this process.
 
@@ -56,12 +56,17 @@ In our samples, we typically use a MVVM approach to bind views with their data. 
 
 A view should have its BindingContext set to the View Model. Then you can bind individual objects in the view to properties of the View Model.
 
-We can convert an Observable into a Reactive Property with an extension method:
+* We can convert an Observable into a Reactive Property with an extension method:
+
 `var reactiveProperty = observable.ToReactiveProperty();`
 
-To bind to a Reactive Property to an object in XAML: `<Label Text="{Binding Name.Value}" />`
+* To bind to a Reactive Property to an object in XAML:
 
-To bind a Reactive Property to an object programatically: `label.SetBinding(Label.TextProperty, "Name.Value")`
+`<Label Text="{Binding Name.Value}" />`
+
+* To bind a Reactive Property to an object programatically:
+
+`label.SetBinding(Label.TextProperty, "Name.Value")`
 
 ## Dependency Injection and Services
 
@@ -114,8 +119,8 @@ For more information on HockeyApp, its uses, and configuring it on both platform
 ## MSBuild with Android
 
 To build the APK with msbuild, run the following:
-`msbuild.exe "MobileTemplate.Droid.csproj" /t:Rebuild,SignAndroidPackage /p:Configuration="Release" 
-`
+
+`msbuild.exe "MobileTemplate.Droid.csproj" /t:Rebuild,SignAndroidPackage /p:Configuration="Release"`
 
 Please note that any distributed APK **must** be built in release mode or else the APK will crash immediately due to missing debugging tools.
 
@@ -129,12 +134,7 @@ For more information, see [Build Process](https://developer.xamarin.com/guides/a
 
 To build the IPA with msbuild, we must be able to access a Mac build agent as described in *Building iOS* above. We can then run the build via msbuild as follows:
 
-`msbuild.exe <MobileTemplate.iOS.csproj> /t:Rebuild /p:ServerAddress="<Mac IP>" /p:ServerUser="<Mac Username>" /p:ServerPassword="<Mac Password>"
-/p:Platform="iPhone"
-/p:Configuration="<Configuration>"
-/p:OutputPath="<Path to Output Directory>/"
-/p:IpaPackageDir="<Path to Output Directory>/"
-/p:BuildIpa=true`
+`msbuild.exe <MobileTemplate.iOS.csproj> /t:Rebuild /p:ServerAddress="<Mac IP>" /p:ServerUser="<Mac Username>" /p:ServerPassword="<Mac Password>" /p:Platform="iPhone" /p:Configuration="<Configuration>" /p:OutputPath="<Path to Output Directory>/" /p:IpaPackageDir="<Path to Output Directory>/" /p:BuildIpa=true`
 
 The `OutputPath` and `IpaPackageDir` must both end with a `/` or else the final set of the directory will be included as part of the filenames.
 
