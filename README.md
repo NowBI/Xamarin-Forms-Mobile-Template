@@ -216,4 +216,8 @@ If you have an Android emulator currently running, close it out and kill any adb
 
 Sometimes your application can get in a bad state on your device and cannot be uninstalled automatically by the build system. To remedy this, on your device, go to "Settings > Apps" and manually uninstall the application. (Note that it may be named its package name instead of the actual application name.) Then re-deploy the application.
 
+>Could not find file 'MobileTemplate.iOS.app.dSYM.zip'.
+
+If you are building a platform configuration that builds the iOS projects and there is no Mac Build Agent connected, it will fail silently until it tries to extract the dSYM file produced by the build. Either connect to the Mac Build Agent or choose a different configuration.
+
 *This Mobile Template is not affiliated or endorsed by Xamarin or Microsoft.*
