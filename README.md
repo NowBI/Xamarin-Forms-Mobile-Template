@@ -58,15 +58,21 @@ A view should have its BindingContext set to the View Model. Then you can bind i
 
 * We can convert an Observable into a Reactive Property with an extension method:
 
-`var reactiveProperty = observable.ToReactiveProperty();`
+```C#
+var reactiveProperty = observable.ToReactiveProperty();
+```
 
 * To bind to a Reactive Property to an object in XAML:
 
-`<Label Text="{Binding Name.Value}" />`
+```C#
+<Label Text="{Binding Name.Value}" />
+```
 
 * To bind a Reactive Property to an object programatically:
 
-`label.SetBinding(Label.TextProperty, "Name.Value")`
+```C#
+label.SetBinding(Label.TextProperty, "Name.Value")
+```
 
 ## Dependency Injection and Services
 
@@ -120,7 +126,9 @@ For more information on HockeyApp, its uses, and configuring it on both platform
 
 To build the APK with msbuild, run the following:
 
-`msbuild.exe "MobileTemplate.Droid.csproj" /t:Rebuild,SignAndroidPackage /p:Configuration="Release"`
+```shell
+msbuild.exe "MobileTemplate.Droid.csproj" /t:Rebuild,SignAndroidPackage /p:Configuration="Release"
+```
 
 Please note that any distributed APK **must** be built in release mode or else the APK will crash immediately due to missing debugging tools.
 
@@ -134,7 +142,9 @@ For more information, see [Build Process](https://developer.xamarin.com/guides/a
 
 To build the IPA with msbuild, we must be able to access a Mac build agent as described in *Building iOS* above. We can then run the build via msbuild as follows:
 
-`msbuild.exe <MobileTemplate.iOS.csproj> /t:Rebuild /p:ServerAddress="<Mac IP>" /p:ServerUser="<Mac Username>" /p:ServerPassword="<Mac Password>" /p:Platform="iPhone" /p:Configuration="<Configuration>" /p:OutputPath="<Path to Output Directory>/" /p:IpaPackageDir="<Path to Output Directory>/" /p:BuildIpa=true`
+```shell
+msbuild.exe <MobileTemplate.iOS.csproj> /t:Rebuild /p:ServerAddress="<Mac IP>" /p:ServerUser="<Mac Username>" /p:ServerPassword="<Mac Password>" /p:Platform="iPhone" /p:Configuration="<Configuration>" /p:OutputPath="<Path to Output Directory>/" /p:IpaPackageDir="<Path to Output Directory>/" /p:BuildIpa=true
+```
 
 The `OutputPath` and `IpaPackageDir` must both end with a `/` or else the final set of the directory will be included as part of the filenames.
 
@@ -146,7 +156,9 @@ You can deploy packages to HockeyApp via command line using curl and a HockeyApp
 
 A sample curl command is as follows:
 
-`curl -F "status=2" -F "notify=0" -F "notes=<Patch Notes>" -F "notes_type=0" -F "ipa=@<Path to IPA or APK>" -F "commit_sha=<Commit SHA of project>" -H "X-HockeyAppToken: <API Token for your HockeyApp Account>" https://rink.hockeyapp.net/api/2/apps/upload`
+```shell
+curl -F "status=2" -F "notify=0" -F "notes=<Patch Notes>" -F "notes_type=0" -F "ipa=@<Path to IPA or APK>" -F "commit_sha=<Commit SHA of project>" -H "X-HockeyAppToken: <API Token for your HockeyApp Account>" https://rink.hockeyapp.net/api/2/apps/upload
+```
 
 For more information see [API: Apps](https://support.hockeyapp.net/kb/api/api-apps#upload-app) in the HockeyApp API documentation.
 
