@@ -15,7 +15,7 @@ namespace MobileTemplate.Core.Pages.Menu
 
             var menuItemService = IoC.Container.Resolve<IMenuItemService>();
             var navigationService = IoC.Container.Resolve<INavigationService>();
-            BindingContext = new MainMenuViewModel("Main Menu", "Copyright 2016 NBI", menuItemService, navigationService);
+            BindingContext = new MainMenuViewModel("Main Menu", "\u00A9 2017 Now Business Intelligence, Inc.", menuItemService, navigationService);
         }
 
         public void Dispose()
