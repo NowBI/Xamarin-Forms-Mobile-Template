@@ -3,13 +3,12 @@ using Xamarin.Forms;
 
 namespace MobileTemplate.Core
 {
-    public class App : Application
+    public partial class App : Application
     {
         public App()
         {
-            // The root page of your application
+            InitializeComponent();
             MainPage = new MasterDetailWrapper();
-
         }
 
         protected override void OnStart()
@@ -26,5 +25,6 @@ namespace MobileTemplate.Core
         {
             // Handle when your app resumes
         }
+
     }
 }

@@ -30,6 +30,8 @@ namespace MobileTemplate.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            RegisterTheme();
+
             return base.FinishedLaunching(app, options);
         }
 
@@ -51,6 +53,14 @@ namespace MobileTemplate.iOS
                 manager.DisableMetricsManager = true;
                 manager.StartManager();
             }
+        }
+
+        private void RegisterTheme()
+        {
+            // Sometimes builders may not register certain libraries if they're only referenced in XAML.
+            // To counteract this, we must add a code reference to them so the assemblies will be included.
+            var lightThemeResources = typeof(Xamarin.Forms.Themes.LightThemeResources);
+            var underlineEffect = typeof(Xamarin.Forms.Themes.iOS.UnderlineEffect);
         }
     }
 }
