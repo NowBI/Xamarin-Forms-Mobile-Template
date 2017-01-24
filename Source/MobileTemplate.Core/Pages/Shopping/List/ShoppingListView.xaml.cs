@@ -5,11 +5,8 @@ namespace MobileTemplate.Core.Pages.Shopping.List
 {
     public partial class ShoppingListView : StackLayout
     {
-        private readonly INavigationService _navigationService;
-
-        public ShoppingListView(INavigationService navigationService)
+        public ShoppingListView()
         {
-            _navigationService = navigationService;
             InitializeComponent();
         }
 

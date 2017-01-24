@@ -16,7 +16,7 @@ namespace MobileTemplate.Core.Pages.Shopping.List
             var shoppingItemService = IoC.Container.Resolve<IShoppingItemService>();
             var navigationService = IoC.Container.Resolve<INavigationService>();
 
-            Content = new ShoppingListView(navigationService);
+            Content = new ShoppingListView();
 
             BindingContext = new ShoppingViewModel(shoppingItemService, navigationService);
         }
