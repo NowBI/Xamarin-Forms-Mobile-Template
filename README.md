@@ -202,7 +202,7 @@ For further discussion on this issue, see [this thread on the Xamarin forums](ht
 
 If you're building Android or Core, make sure you're targeting the ARM or Core build configuration and don't have one of your iOs projects listed as your target build. Otherwise Visual Studio will attempt to communicate with your Mac Build Agent every time you rebuild. Alternatively, you can disconnect the Mac Build Agent in "Tools > iOS > Xamarin Mac Agent".
 
-If you're building iOS, this is unfortunately pretty natural. The process of sending the data over the pipe can be quite time consuming. It is up to you whether or not you find it worthwhile to maintain a second development environment on iOS or not.
+If you're building iOS, check the Mac Build Agent and ensure there are no popup dialogs awaiting your confirmation (i.e. allowing access to your keychain so you can use your provisioning profiles.) If it is a timing issue, unfortunately the process of compiling core binaries, transferring them to the Mac, compiling the remaining code, then transferring them back, is quite time consuming. It may be worthwhile to do iOS-specific coding and debugging directly in a Mac environment if you find it to be too time consuming.
 
 >Visual Studio is stuck connecting to my Mac Build Agent.
 
