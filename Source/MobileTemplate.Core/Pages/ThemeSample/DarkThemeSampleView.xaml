@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ScrollView xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:themes="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Light"
-            x:Class="MobileTemplate.Core.Pages.ThemeSample.LightThemeSampleView"
-            BackgroundColor="#EEEEEE">
+            xmlns:themes="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Dark"
+            x:Class="MobileTemplate.Core.Pages.ThemeSample.DarkThemeSampleView"
+            BackgroundColor="#333333">
   <ScrollView.Resources>
-    <ResourceDictionary MergedWith="themes:LightThemeResources" />
+    <ResourceDictionary MergedWith="themes:DarkThemeResources" />
   </ScrollView.Resources>
   <StackLayout Padding="6">
     <Label StyleClass="Header" Text="BoxView"></Label>

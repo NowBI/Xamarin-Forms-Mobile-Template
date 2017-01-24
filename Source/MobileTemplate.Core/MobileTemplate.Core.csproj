@@ -134,10 +134,14 @@
     <Compile Include="Pages\Shopping\List\ShoppingListPage.cs" />
     <Compile Include="Pages\Shopping\Cart\ShoppingCartViewModel.cs" />
     <Compile Include="Pages\Shopping\ShoppingViewModel.cs" />
+    <Compile Include="Pages\ThemeSample\DarkThemeSamplePage.cs" />
     <Compile Include="Pages\ThemeSample\LightThemeSamplePage.cs" />
     <Compile Include="Pages\ThemeSample\CustomThemeSamplePage.cs" />
     <Compile Include="Pages\ThemeSample\CustomThemeSampleView.xaml.cs">
       <DependentUpon>CustomThemeSampleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ThemeSample\DarkThemeSampleView.xaml.cs">
+      <DependentUpon>DarkThemeSampleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ThemeSample\LightThemeSampleView.xaml.cs">
       <DependentUpon>LightThemeSampleView.xaml</DependentUpon>
@@ -149,6 +153,9 @@
     <Compile Include="Services\SampleService.cs" />
     <Compile Include="Services\Shopping\ShoppingCartService.cs" />
     <Compile Include="Services\Shopping\ShoppingItemService.cs" />
+    <Compile Include="Themes\NbiThemeResources.xaml.cs">
+      <DependentUpon>NbiThemeResources.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Themes\CustomThemeResources.xaml.cs">
       <DependentUpon>CustomThemeResources.xaml</DependentUpon>
     </Compile>
@@ -207,6 +214,10 @@
     </Reference>
     <Reference Include="Xamarin.Forms.Theme.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.Theme.Base.1.0.0.43-pre1\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Theme.Base.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Theme.Dark, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Theme.Dark.1.0.0.43-pre1\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Theme.Dark.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Theme.Light, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -357,6 +368,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\ThemeSample\CustomThemeSampleView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ThemeSample\DarkThemeSampleView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Themes\NbiThemeResources.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

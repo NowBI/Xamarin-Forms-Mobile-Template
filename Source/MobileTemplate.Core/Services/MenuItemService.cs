@@ -36,6 +36,7 @@ namespace MobileTemplate.Core.Services
                 new MenuItemModel("Shopping Grid Sample", "Icon.png", () => new ShoppingGridPage()),
                 new MenuItemModel("Shopping Cart Sample", "Icon.png", () => new ShoppingCartPage()),
                 new MenuItemModel("Light Theme Sample", "Icon.png", () => new LightThemeSamplePage()),
+                new MenuItemModel("Dark Theme Sample", "Icon.png", () => new DarkThemeSamplePage()),
                 new MenuItemModel("Custom Theme Sample", "Icon.png", () => new CustomThemeSamplePage()),
                 new MenuItemModel("Service Sample", "Icon.png", () => new ServiceSamplePage()),
                 new MenuItemModel("Assets Sample", "Icon.png", () => new AssetSamplePage()),

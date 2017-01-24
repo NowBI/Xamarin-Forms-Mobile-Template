@@ -23,7 +23,7 @@ namespace MobileTemplate.Droid
             BuildIoCContainer();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            RegisterTheme();
+            VerifyThemeAssemblies();
             LoadApplication(new App());
         }
 
@@ -61,11 +61,12 @@ namespace MobileTemplate.Droid
             UpdateManager.Unregister();
         }
 
-        private void RegisterTheme()
+        private void VerifyThemeAssemblies()
         {
             // Sometimes builders may not register certain libraries if they're only referenced in XAML.
             // To counteract this, we must add a code reference to them so the assemblies will be included.
             var lightThemeResources = typeof(Xamarin.Forms.Themes.LightThemeResources);
+            var verifyThemeResources = typeof(Xamarin.Forms.Themes.DarkThemeResources);
             var underlineEffect = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
         }
     }

@@ -152,6 +152,10 @@
       <HintPath>..\..\packages\Xamarin.Forms.Theme.Base.1.0.0.43-pre1\lib\Xamarin.iOS10\Xamarin.Forms.Theme.Base.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Xamarin.Forms.Theme.Dark, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.Theme.Dark.1.0.0.43-pre1\lib\Xamarin.iOS10\Xamarin.Forms.Theme.Dark.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Xamarin.Forms.Theme.iOS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.Theme.Base.1.0.0.43-pre1\lib\Xamarin.iOS10\Xamarin.Forms.Theme.iOS.dll</HintPath>
       <Private>True</Private>
@@ -188,7 +192,6 @@
     <BundleResource Include="Resources\photo_stock_statehouse.jpg" />
     <BundleResource Include="Resources\Text\asset_sample_text_file.txt" />
   </ItemGroup>
-  
   <ItemGroup>
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\167.png">
       <InProject>false</InProject>
