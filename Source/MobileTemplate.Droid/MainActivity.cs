@@ -23,9 +23,8 @@ namespace MobileTemplate.Droid
             BuildIoCContainer();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
-
             RegisterTheme();
+            LoadApplication(new App());
         }
 
         protected override void OnPause()

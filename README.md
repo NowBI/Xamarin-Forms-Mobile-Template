@@ -1,5 +1,5 @@
 # Xamarin-Forms-Template
-A simple [Xamarin Forms](https://www.xamarin.com/) project with a pre-configured Visual Studio 2015 environment, View Templates, Observables and [Reactive Properties](https://msdn.microsoft.com/en-us/library/hh242985(v=vs.103).aspx), Dependency Injection via [Autofac](https://autofac.org/), Unit Tests via [xUnit](http://xunit.github.io/), and Crash Logging via [HockeyApp](https://hockeyapp.net/) to be used as a starting point for mobile projects deployed to Android and iOS.
+A simple [Xamarin Forms](https://www.xamarin.com/) project with a pre-configured Visual Studio 2015 environment, View Templates, [Themes](https://developer.xamarin.com/guides/xamarin-forms/themes/), Observables and [Reactive Properties](https://msdn.microsoft.com/en-us/library/hh242985(v=vs.103).aspx), Dependency Injection via [Autofac](https://autofac.org/), Unit Tests via [xUnit](http://xunit.github.io/), and Crash Logging via [HockeyApp](https://hockeyapp.net/) to be used as a starting point for mobile projects deployed to Android and iOS.
 
 # Getting Started
 
@@ -41,6 +41,12 @@ This template project features a number of sample views that can be used as star
 Example views contain samples of both [XAML-driven](https://developer.xamarin.com/guides/xamarin-forms/xaml/) pages and manually-coded pages.
 
 For more information about creating Xamarin Forms pages, views,view models, etcetera, see the [Xamarin Forms](https://developer.xamarin.com/guides/xamarin-forms/) section of the Xamarin developer guide.
+
+## Themes
+
+The template project is pre-configured with Xamarin's experimental [themeing engine](https://developer.xamarin.com/guides/xamarin-forms/themes/) with a sample theme based on the default [Light](https://developer.xamarin.com/guides/xamarin-forms/themes/light/) theme, allowing users to quickly customize the look and feel of their app to represent their intent.
+
+For more information on customizing your theme, see [Creating a Custom Theme](https://developer.xamarin.com/guides/xamarin-forms/themes/custom/) on the Xamarin developer guide.
 
 ## Observables and Reactive Properties
 

@@ -28,9 +28,8 @@ namespace MobileTemplate.iOS
             BuildIoCContainer();
 
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
-
             RegisterTheme();
+            LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }

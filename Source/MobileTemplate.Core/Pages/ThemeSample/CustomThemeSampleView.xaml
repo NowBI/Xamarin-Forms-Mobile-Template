@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:themes="clr-namespace:MobileTemplate.Core.Themes;assembly=MobileTemplate.Core"
+            x:Class="MobileTemplate.Core.Pages.ThemeSample.CustomThemeSampleView">
+  <ScrollView.Resources>
+    <ResourceDictionary MergedWith="themes:CustomThemeResources" />
+  </ScrollView.Resources>
+  <StackLayout Padding="6">
+    <Label StyleClass="YellowLabel" Text="YellowLabel"></Label>
+    <Button StyleClass="PurpleButton" Text="PurpleButton" Image="Icon.png"></Button>
+  </StackLayout>
+</ScrollView>

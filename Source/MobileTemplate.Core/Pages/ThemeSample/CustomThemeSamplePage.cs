@@ -4,12 +4,12 @@ using Xamarin.Forms;
 
 namespace MobileTemplate.Core.Pages.ThemeSample
 {
-    public class ThemeSamplePage : ContentPage, IDisposable
+    public class CustomThemeSamplePage : ContentPage, IDisposable
     {
-        public ThemeSamplePage()
+        public CustomThemeSamplePage()
         {
-            Title = "Theme Sample";
-            Content = new ThemeSampleView();
+            Title = "Custom Theme Sample";
+            Content = new CustomThemeSampleView();
         }
 
         public void Dispose()

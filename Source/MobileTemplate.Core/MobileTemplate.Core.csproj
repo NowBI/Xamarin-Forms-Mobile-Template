@@ -134,9 +134,13 @@
     <Compile Include="Pages\Shopping\List\ShoppingListPage.cs" />
     <Compile Include="Pages\Shopping\Cart\ShoppingCartViewModel.cs" />
     <Compile Include="Pages\Shopping\ShoppingViewModel.cs" />
-    <Compile Include="Pages\ThemeSample\ThemeSamplePage.cs" />
-    <Compile Include="Pages\ThemeSample\ThemeSampleView.xaml.cs">
-      <DependentUpon>ThemeSampleView.xaml</DependentUpon>
+    <Compile Include="Pages\ThemeSample\LightThemeSamplePage.cs" />
+    <Compile Include="Pages\ThemeSample\CustomThemeSamplePage.cs" />
+    <Compile Include="Pages\ThemeSample\CustomThemeSampleView.xaml.cs">
+      <DependentUpon>CustomThemeSampleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ThemeSample\LightThemeSampleView.xaml.cs">
+      <DependentUpon>LightThemeSampleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AssetService.cs" />
@@ -145,6 +149,9 @@
     <Compile Include="Services\SampleService.cs" />
     <Compile Include="Services\Shopping\ShoppingCartService.cs" />
     <Compile Include="Services\Shopping\ShoppingItemService.cs" />
+    <Compile Include="Themes\CustomThemeResources.xaml.cs">
+      <DependentUpon>CustomThemeResources.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -337,7 +344,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\ThemeSample\ThemeSampleView.xaml">
+    <EmbeddedResource Include="Pages\ThemeSample\LightThemeSampleView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Themes\CustomThemeResources.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ThemeSample\CustomThemeSampleView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

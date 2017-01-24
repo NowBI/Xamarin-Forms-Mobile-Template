@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="MobileTemplate.Core.Themes.CustomThemeResources">
+  <Style TargetType="Button" Class="PurpleButton">
+    <Setter Property="BackgroundColor" Value="Purple" />
+    <Setter Property="TextColor" Value="Orange" />
+    <Setter Property="BorderColor" Value="Red" />
+    <Setter Property="BorderRadius" Value="12" />
+    <Setter Property="BorderWidth" Value="6.0" />
+  </Style>
+  <Style TargetType="Label" Class="YellowLabel">
+    <Setter Property="BackgroundColor" Value="Yellow" />
+    <Setter Property="TextColor" Value="Maroon" />
+    <Setter Property="FontAttributes" Value="Bold" />
+  </Style>
+</ResourceDictionary>
