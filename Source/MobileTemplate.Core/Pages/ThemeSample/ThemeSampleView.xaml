@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MobileTemplate.Core.Pages.ThemeSample.ThemeSampleView">
+  <StackLayout Padding="6">
+    <Label StyleClass="Header" Text="BoxView"></Label>
+    <StackLayout Padding="30,0">
+      <Label StyleClass="Subheader" Text="HorizontalRule"></Label>
+      <BoxView StyleClass="HorizontalRule"></BoxView>
+
+      <Label StyleClass="Subheader" Text="Circle"></Label>
+      <BoxView StyleClass="Circle"></BoxView>
+
+      <Label StyleClass="Subheader" Text="Rounded"></Label>
+      <BoxView StyleClass="Rounded"></BoxView>
+    </StackLayout>
+    <Label StyleClass="Header" Text="Image"></Label>
+    <StackLayout Padding="30,0">
+      <Label StyleClass="Subheader" Text="Circle"></Label>
+      <Image StyleClass="Circle" Source="photo_stock_coffee.jpg"></Image>
+
+      <Label StyleClass="Subheader" Text="Rounded"></Label>
+      <Image StyleClass="Rounded" Source="photo_stock_coffee.jpg"></Image>
+
+      <Label StyleClass="Subheader" Text="Thumbnail"></Label>
+      <Image StyleClass="Thumbnail" Source="photo_stock_coffee.jpg"></Image>
+    </StackLayout>
+    <Label StyleClass="Header" Text="Button"></Label>
+    <StackLayout Padding="30,0">
+      <Button StyleClass="Default" Text="Default" Image="Icon.png"></Button>
+      <Button StyleClass="Primary" Text="Primary" Image="Icon.png"></Button>
+      <Button StyleClass="Success" Text="Success" Image="Icon.png"></Button>
+      <Button StyleClass="Info" Text="Info" Image="Icon.png"></Button>
+      <Button StyleClass="Warning" Text="Warning" Image="Icon.png"></Button>
+      <Button StyleClass="Danger" Text="Danger" Image="Icon.png"></Button>
+      <Button StyleClass="Link" Text="Link" Image="Icon.png"></Button>
+      <Button StyleClass="Small" Text="Small" Image="Icon.png"></Button>
+      <Button StyleClass="Large" Text="Large" Image="Icon.png"></Button>
+    </StackLayout>
+    <Label StyleClass="Header" Text="Label"></Label>
+    <StackLayout Padding="30,0">
+      <Label StyleClass="Header" Text="Header"></Label>
+      <Label StyleClass="Subheader" Text="Subheader"></Label>
+      <Label StyleClass="Body" Text="Body"></Label>
+      <Label StyleClass="Link" Text="Link"></Label>
+      <Label StyleClass="Inverse" Text="Inverse"></Label>
+    </StackLayout>
+  </StackLayout>
+</ScrollView>

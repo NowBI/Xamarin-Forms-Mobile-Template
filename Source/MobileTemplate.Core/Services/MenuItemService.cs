@@ -10,6 +10,7 @@ using MobileTemplate.Core.Pages.ServiceSample;
 using MobileTemplate.Core.Pages.Shopping.Cart;
 using MobileTemplate.Core.Pages.Shopping.Grid;
 using MobileTemplate.Core.Pages.Shopping.List;
+using MobileTemplate.Core.Pages.ThemeSample;
 using Reactive.Bindings;
 
 namespace MobileTemplate.Core.Services
@@ -34,6 +35,7 @@ namespace MobileTemplate.Core.Services
                 new MenuItemModel("Shopping List Sample", "Icon.png", () => new ShoppingListPage()),
                 new MenuItemModel("Shopping Grid Sample", "Icon.png", () => new ShoppingGridPage()),
                 new MenuItemModel("Shopping Cart Sample", "Icon.png", () => new ShoppingCartPage()),
+                new MenuItemModel("Themes Sample", "Icon.png", () => new ThemeSamplePage()),
                 new MenuItemModel("Service Sample", "Icon.png", () => new ServiceSamplePage()),
                 new MenuItemModel("Assets Sample", "Icon.png", () => new AssetSamplePage()),
                 new MenuItemModel("Custom Renderer Sample", "Icon.png", () => new RendererSamplePage()),

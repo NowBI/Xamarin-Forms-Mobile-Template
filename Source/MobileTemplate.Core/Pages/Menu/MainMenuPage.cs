@@ -10,7 +10,7 @@ namespace MobileTemplate.Core.Pages.Menu
     {
         public MainMenuPage()
         {
-            Title = "Main Menu Sample";
+            Title = "Menu";
             Content = new MainMenuView();
 
             var menuItemService = IoC.Container.Resolve<IMenuItemService>();
