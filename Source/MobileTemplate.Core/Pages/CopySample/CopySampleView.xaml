@@ -3,10 +3,16 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="MobileTemplate.Core.Pages.CopySample.CopySampleView">
   <StackLayout Padding="6">
+    <Label StyleClass="PageHeader">
+      Header of Page Sample
+    </Label>
+    <Label StyleClass="PageSubHeader">
+      Subheader of Page
+    </Label>
     <Label>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus ornare quam, eget dignissim libero. Fusce vitae velit a nibh fringilla rutrum id at tellus. Etiam congue neque orci, eget porta risus vulputate sed. Nulla quis odio vel arcu ultricies euismod eget non erat. Fusce nec elementum dolor. Nulla accumsan velit at nibh vehicula iaculis. In urna ex, posuere sit amet tortor maximus, cursus hendrerit justo. Nulla id neque a mauris placerat pretium. Nullam justo nisl, commodo et leo nec, euismod tristique enim. Ut vel ligula nec augue viverra fringilla. Nam diam risus, tincidunt at elit feugiat, malesuada luctus massa.
     </Label>
-    <Image Source="photo_stock_market.jpg" HorizontalOptions="Center" Margin="32" />
+    <Image Source="photo_stock_market.jpg" HorizontalOptions="Center" Margin="32" StyleClass="Rounded"/>
     <Label>
       Sed eget porta est. Mauris ac sagittis ante, sed pharetra velit. Aenean suscipit auctor diam, ac fringilla mi. Pellentesque rutrum elit commodo orci aliquam, eget lacinia ipsum lobortis. Aliquam ut nisi nec libero eleifend pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec condimentum elementum sem. Maecenas quis mi interdum sapien venenatis condimentum sed sit amet felis.
     </Label>
@@ -19,7 +25,7 @@
     <Label>
       Praesent viverra, risus vel lobortis efficitur, sem turpis elementum risus, quis fermentum leo nibh eget justo. Aenean erat leo, molestie nec sollicitudin et, pellentesque quis erat. Proin pulvinar porttitor commodo. Donec rhoncus eu orci et finibus. Sed posuere, nisl in interdum interdum, sapien ante varius enim, lacinia imperdiet massa enim laoreet enim. In nec ex pharetra, efficitur leo at, dictum ante. Quisque tincidunt ante at commodo egestas. Maecenas a dui non risus elementum consectetur ac sit amet risus. Duis aliquet eget enim ut ultrices. Aliquam ut condimentum quam. Cras eget laoreet justo. Curabitur eu scelerisque enim. Cras vel lobortis sapien.
     </Label>
-    <Image Source="photo_stock_laptop.jpg" HorizontalOptions="Center" Margin="32" />
+    <Image Source="photo_stock_laptop.jpg" HorizontalOptions="Center" Margin="32" StyleClass="Rounded"/>
     <Label>
       Suspendisse velit justo, aliquet ut tincidunt vitae, blandit a eros. In tempor viverra nunc scelerisque egestas. Nullam sit amet tincidunt velit. Vivamus eget porttitor tortor. Mauris at sagittis sem. Nullam a diam vehicula, tempor quam et, mollis arcu. Curabitur mollis auctor arcu, vel elementum dui dapibus sit amet. Pellentesque libero mi, ullamcorper sed dolor et, egestas ullamcorper lorem. Nam ut semper quam. Nullam vitae neque ut mi scelerisque porttitor vel ac nisi. Vivamus diam leo, faucibus vitae sagittis et, semper et nisl. Phasellus rhoncus ex eu turpis lacinia euismod. Praesent ut hendrerit leo. Sed a tellus magna. Aliquam in bibendum mauris, consequat viverra massa. Maecenas posuere, metus eget blandit efficitur, orci ligula bibendum leo, a lacinia ligula lectus et nisi.
     </Label>
@@ -41,14 +47,14 @@
     <Label>
       Cras molestie bibendum cursus. Mauris urna ligula, fermentum quis sagittis quis, pharetra id dui. Aliquam ipsum ipsum, volutpat in viverra volutpat, cursus id ligula. Proin sodales, lectus quis ultricies porttitor, nibh tortor vestibulum mauris, at aliquam felis metus sed risus. Nam varius quam non elementum dictum. Donec efficitur mauris eget nisi aliquet facilisis. Nulla facilisi. Vivamus ut varius quam.
     </Label>
-    <Image Source="photo_stock_statehouse.jpg" HorizontalOptions="Center" Margin="32" />
+    <Image Source="photo_stock_statehouse.jpg" HorizontalOptions="Center" Margin="32" StyleClass="Rounded"/>
     <Label>
       Nullam interdum, sem vitae laoreet efficitur, sem libero malesuada nisl, at blandit eros lorem tincidunt lacus. Nunc quis felis pulvinar, blandit diam nec, blandit nisi. Nunc sit amet fermentum nibh, ac dictum leo. Pellentesque maximus eleifend nulla sit amet semper. Integer sapien nunc, efficitur a vestibulum in, dictum in mauris. Nulla ut metus viverra, hendrerit leo eu, sodales lectus. Morbi orci eros, tempus ut posuere eu, condimentum eu velit. Aenean consectetur vel sem sit amet dictum. Morbi iaculis enim erat, et porttitor ipsum finibus at. Mauris ac erat vel neque blandit malesuada. Proin vehicula sit amet lectus a pretium. Quisque tempor maximus suscipit. Mauris et feugiat ipsum. Sed ut pretium dui.
     </Label>
     <Label>
       Integer feugiat, justo et rhoncus suscipit, felis eros viverra ligula, vel ornare ipsum tortor id augue. Donec fermentum non nunc sed fermentum. Proin vitae quam eros. Donec nec augue turpis. Vestibulum a lacinia sapien. Duis viverra enim at scelerisque dapibus. Suspendisse convallis gravida neque a finibus. Ut dictum aliquam leo, at tincidunt erat volutpat vitae. Nulla non lacinia orci, id mattis lectus. Integer pellentesque dolor eu lobortis porttitor. Suspendisse viverra non mauris vitae porta.
     </Label>
-    <Image Source="nbi_logo.png" HorizontalOptions="Center" Margin="32" />
+    <Image Source="nbi_logo.png" HorizontalOptions="Center" Margin="32"  StyleClass="Rounded"/>
     <Label>
       Donec rhoncus lacinia vehicula. Quisque interdum metus vel egestas malesuada. Fusce ante nulla, varius ut tristique vel, aliquam at ligula. Nunc in rutrum risus, sit amet tincidunt felis. Cras id porttitor lacus. Nunc molestie nunc quis purus hendrerit, nec laoreet enim tempor. Curabitur molestie ligula a fringilla rhoncus. Donec blandit enim in vehicula tristique. Nullam tincidunt tincidunt vestibulum. Etiam sagittis condimentum sodales. Phasellus pharetra justo in nunc elementum, quis convallis nibh convallis.
     </Label>
@@ -76,7 +82,7 @@
     <Label>
       Fusce tempus libero imperdiet elit cursus, vitae rhoncus turpis gravida. Nunc consequat massa eu rutrum semper. Aenean finibus malesuada mauris, non pellentesque turpis mattis non. Morbi venenatis semper ante. Donec gravida turpis eu augue bibendum, vel egestas mauris aliquam. Nulla rhoncus tortor sed ultricies ultricies. Ut eu nunc sed turpis elementum semper. Nullam blandit eu nunc eget rhoncus. Praesent et tempor enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus scelerisque arcu nec dignissim rhoncus. Vestibulum ligula lacus, posuere sit amet sodales in, finibus vel diam. Ut maximus, metus nec consectetur tincidunt, arcu libero iaculis ante, id lacinia nulla nisi sed nulla. Cras fringilla purus quis tincidunt tempor.
     </Label>
-    <Image Source="photo_stock_coffee.jpg" HorizontalOptions="Center" Margin="32" />
+    <Image Source="photo_stock_coffee.jpg" HorizontalOptions="Center" Margin="32"  StyleClass="Rounded"/>
     <Label>
       Quisque neque dui, consequat nec est sed, auctor hendrerit ante. Vestibulum vitae blandit risus, non commodo turpis. Morbi elementum, erat ut posuere facilisis, dolor diam volutpat lectus, vel interdum augue tellus eu ante. Etiam sagittis mattis leo quis porttitor. Duis venenatis, ante vel luctus faucibus, magna mi vehicula justo, eu blandit tellus enim ac est. Proin faucibus ac ante eget fermentum. Sed id pellentesque magna. Vestibulum dapibus, odio sit amet pharetra euismod, urna leo fringilla nibh, et dapibus risus ex quis ligula.
     </Label>

@@ -1,6 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:themes="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Base"
                     x:Class="MobileTemplate.Core.Themes.NbiThemeResources">
+  <Color x:Key="NbiWhite">#FFFFFF</Color>
+  <Color x:Key="NbiGrey">#57585B</Color>
+  <Color x:Key="NbiBlue">#0085C7</Color>
+  <Color x:Key="HeaderBackgroundBlack">#66000000</Color>
+  <Color x:Key="HeaderBackgroundBlue">#CC428bca</Color>
+  <Color x:Key="GreyPrimary">#333333</Color>
+  <Color x:Key="GreySecondary">#777777</Color>
+  <Color x:Key="BluePrimary">#0085C7</Color>
+  <Color x:Key="BlueSecondary">#428BCA</Color>
   
+  <Style x:Key="BaseButtonStyle" TargetType="Button">
+    <Setter Property="BorderRadius" Value="0" ></Setter>
+    <Setter Property="BorderWidth" Value="0"></Setter>
+    <Setter Property="TextColor" Value="{StaticResource BluePrimary}" ></Setter>
+    <Setter Property="BackgroundColor" Value="{StaticResource NbiWhite}"></Setter>
+  </Style>
+  <Style x:Key="BaseLabelStyle" TargetType="Label">
+    <Setter Property="TextColor" Value="{StaticResource GreyPrimary}"></Setter>
+  </Style>
+  <Style x:Key="PageHeaderLabelStyle" TargetType="Label" Class="PageHeader" BasedOn="{StaticResource BaseLabelStyle}">
+    <Setter Property="TextColor" Value="{StaticResource NbiWhite}"></Setter>
+    <Setter Property="FontSize" Value="50"></Setter>
+    <Setter Property="BackgroundColor" Value="{StaticResource HeaderBackgroundBlack}"></Setter>
+    <Setter Property="Margin" Value="30,16"></Setter>
+  </Style>
+  <Style x:Key="PageSubHeaderLabelStyle" TargetType="Label" Class="PageSubHeader" BasedOn="{StaticResource BaseLabelStyle}">
+    <Setter Property="TextColor" Value="{StaticResource NbiWhite}"></Setter>
+    <Setter Property="FontSize" Value="18"></Setter>
+    <Setter Property="BackgroundColor" Value="{StaticResource HeaderBackgroundBlue}"></Setter>
+    <Setter Property="Margin" Value="30,16"></Setter>
+  </Style>
+  <Style x:Key="HeaderLabelStyle" TargetType="Label" Class="Header" BasedOn="{StaticResource BaseLabelStyle}">
+    <Setter Property="FontSize" Value="30"></Setter>
+  </Style>
+  <Style x:Key="SubHeaderLabelStyle" TargetType="Label" Class="SubHeader" BasedOn="{StaticResource BaseLabelStyle}">
+    <Setter Property="FontSize" Value="24"></Setter>
+  </Style>
+  <Style x:Key="SectionHeaderLabelStyle" TargetType="Label" Class="SectionHeader" BasedOn="{StaticResource HeaderLabelStyle}">
+    <Setter Property="TextColor" Value="{StaticResource BlueSecondary}"></Setter>
+    <Setter Property="FontAttributes" Value="Bold"></Setter>
+  </Style>
+  <Style x:Key="RoundedImage" TargetType="Image" Class="Rounded">
+    <Setter Property="themes:ThemeEffects.CornerRadius" Value="6"></Setter>
+  </Style>
 </ResourceDictionary>
