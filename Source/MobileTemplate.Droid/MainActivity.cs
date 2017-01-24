@@ -5,6 +5,7 @@ using Autofac;
 using HockeyApp;
 using HockeyApp.Android;
 using MobileTemplate.Core;
+using MobileTemplate.Core.Themes;
 using CrashManager = HockeyApp.Android.CrashManager;
 
 namespace MobileTemplate.Droid
@@ -66,7 +67,7 @@ namespace MobileTemplate.Droid
             // Sometimes builders may not register certain libraries if they're only referenced in XAML.
             // To counteract this, we must add a code reference to them so the assemblies will be included.
             var lightThemeResources = typeof(Xamarin.Forms.Themes.LightThemeResources);
-            var verifyThemeResources = typeof(Xamarin.Forms.Themes.DarkThemeResources);
+            var darkThemeResources = typeof(Xamarin.Forms.Themes.DarkThemeResources);
             var underlineEffect = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
         }
     }

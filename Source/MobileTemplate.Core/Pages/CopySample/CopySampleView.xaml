@@ -3,10 +3,10 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="MobileTemplate.Core.Pages.CopySample.CopySampleView">
   <StackLayout Padding="6">
-    <Label StyleClass="PageHeader">
+    <Label StyleClass="Header">
       Header of Page Sample
     </Label>
-    <Label StyleClass="PageSubHeader">
+    <Label StyleClass="SubHeader">
       Subheader of Page
     </Label>
     <Label>
@@ -92,10 +92,8 @@
     <Label>
       Vestibulum dolor justo, ornare vel scelerisque nec, gravida ac massa. Ut dignissim lectus enim, et gravida erat ultrices ut. Fusce dui lacus, tempor non fermentum id, rhoncus id dui. Morbi ligula nunc, luctus ut rhoncus ut, ullamcorper dictum ligula. Integer id mi ut eros pharetra dictum. Nulla et tempus nisl. Nullam molestie metus consectetur diam dignissim ultrices. Fusce pellentesque dolor nec bibendum malesuada. Nam eleifend dui sed justo fermentum convallis vel vel neque. Nulla condimentum odio velit, non pulvinar metus imperdiet sed. Maecenas luctus aliquet odio, sit amet luctus ante cursus nec. Donec eget arcu diam.
     </Label>
-    <Label HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End" FontAttributes="Italic" FontSize="Small">
+    <Label StyleClass="Signature">
       - Posted by Now Business Intelligence, Inc.
-    </Label>
-    <Label HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End" FontAttributes="Italic" FontSize="Small">
       12/27/16 @ 12:43 PM
     </Label>
   </StackLayout>
