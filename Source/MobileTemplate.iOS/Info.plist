@@ -27,33 +27,13 @@
 	<string>com.nowintelligence.template.test</string>
 	<key>CFBundleVersion</key>
 	<string>LOCAL_DEBUG</string>
-	<key>CFBundleIconFiles</key>
-	<array>
-		<string>Icon-72@2x.png</string>
-		<string>Icon-72.png</string>
-		<string>Icon@2x.png</string>
-		<string>Icon-60@2x.png</string>
-		<string>Icon-76.png</string>
-		<string>Icon-76@2x.png</string>
-		<string>Default.png</string>
-		<string>Default@2x.png</string>
-		<string>Default-568h@2x.png</string>
-		<string>Default-Portrait.png</string>
-		<string>Default-Portrait@2x.png</string>
-		<string>Icon-Small-50@2x.png</string>
-		<string>Icon-Small-50.png</string>
-		<string>Icon-Small-40.png</string>
-		<string>Icon-Small-40@2x.png</string>
-		<string>Icon-Small.png</string>
-		<string>Icon-Small@2x.png</string>
-	</array>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>CFBundleShortVersionString</key>
 	<string>LOCAL_DEBUG</string>
-	<key>UIMainStoryboardFile</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile~ipad</key>
-	<string>LaunchScreen</string>
+  <key>UIRequiresFullScreen</key>
+  <true/>
+  <key>XSAppIconAssets</key>
+  <string>Resources/Media.xcassets/AppIcons.appiconset</string>
+  <key>XSLaunchImageAssets</key>
+  <string>Resources/Media.xcassets/LaunchImages.launchimage</string>
 </dict>
 </plist>
