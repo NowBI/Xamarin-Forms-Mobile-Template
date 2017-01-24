@@ -28,16 +28,16 @@ namespace MobileTemplate.Core.Services
         {
             var items = new[]
             {
-                new MenuItemModel("Home Sample", "icon.png", () => new LandingPage()),
-                new MenuItemModel("Copy Sample","icon.png", ()=>new CopySamplePage()),
-                new MenuItemModel("Form Sample", "icon.png", () => new FormSamplePage()),
-                new MenuItemModel("Shopping List Sample", "icon.png", () => new ShoppingListPage()),
-                new MenuItemModel("Shopping Grid Sample", "icon.png", () => new ShoppingGridPage()),
-                new MenuItemModel("Shopping Cart Sample", "icon.png", () => new ShoppingCartPage()),
-                new MenuItemModel("Service Sample", "icon.png", () => new ServiceSamplePage()),
-                new MenuItemModel("Assets Sample", "icon.png", () => new AssetSamplePage()),
-                new MenuItemModel("Custom Renderer Sample", "icon.png", () => new RendererSamplePage()),
-                new MenuItemModel("Reactive Sample", "icon.png", () => new ReactiveSamplePage())
+                new MenuItemModel("Home Sample", "Icon.png", () => new LandingPage()),
+                new MenuItemModel("Copy Sample","Icon.png", ()=>new CopySamplePage()),
+                new MenuItemModel("Form Sample", "Icon.png", () => new FormSamplePage()),
+                new MenuItemModel("Shopping List Sample", "Icon.png", () => new ShoppingListPage()),
+                new MenuItemModel("Shopping Grid Sample", "Icon.png", () => new ShoppingGridPage()),
+                new MenuItemModel("Shopping Cart Sample", "Icon.png", () => new ShoppingCartPage()),
+                new MenuItemModel("Service Sample", "Icon.png", () => new ServiceSamplePage()),
+                new MenuItemModel("Assets Sample", "Icon.png", () => new AssetSamplePage()),
+                new MenuItemModel("Custom Renderer Sample", "Icon.png", () => new RendererSamplePage()),
+                new MenuItemModel("Reactive Sample", "Icon.png", () => new ReactiveSamplePage())
             };
             _menuItemsInternal = new ReactiveProperty<IEnumerable<MenuItemModel>>(items);
             MenuItems = _menuItemsInternal.ToReadOnlyReactiveProperty();
