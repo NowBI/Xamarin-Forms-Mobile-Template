@@ -2,8 +2,9 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:themes="clr-namespace:MobileTemplate.Core.Themes;assembly=MobileTemplate.Core"
+             xmlns:themes1="clr-namespace:Xamarin.Forms.Themes;assembly=Xamarin.Forms.Theme.Light"
              x:Class="MobileTemplate.Core.App">
   <Application.Resources>
-    <ResourceDictionary MergedWith="themes:NbiThemeResources" />
+    <themes:NbiThemeResources MergedWith="themes1:LightThemeResources" />
   </Application.Resources>
 </Application>

@@ -27,7 +27,6 @@
     <Setter Property="HorizontalTextAlignment" Value="End"></Setter>
   </Style>
 
-
   <!-- Header Styles -->
   <Style TargetType="Label" Class="Header" ApplyToDerivedTypes="True">
     <Setter Property="TextColor" Value="{StaticResource GreyPrimary}"></Setter>
@@ -42,17 +41,20 @@
     <Setter Property="FontSize" Value="18"></Setter>
     <Setter Property="FontAttributes" Value="Bold"></Setter>
   </Style>
-  
+
   <!-- Image Styles -->
   <Style TargetType="Image" Class="Rounded" ApplyToDerivedTypes="True">
     <Setter Property="themes:ThemeEffects.CornerRadius" Value="6"></Setter>
   </Style>
-  
+
   <!-- Button Styles -->
   <Style TargetType="Button" ApplyToDerivedTypes="True">
     <Setter Property="BorderRadius" Value="0" ></Setter>
     <Setter Property="BorderWidth" Value="0"></Setter>
     <Setter Property="TextColor" Value="{StaticResource BluePrimary}" ></Setter>
     <Setter Property="BackgroundColor" Value="{StaticResource NbiWhite}"></Setter>
+    <Setter Property="HorizontalOptions" Value="Fill"></Setter>
+    <Setter Property="themes:ThemeEffects.Shadow" Value="True"></Setter>
+    <Setter Property="themes:ThemeEffects.ShadowSize" Value="2"></Setter>
   </Style>
 </ResourceDictionary>

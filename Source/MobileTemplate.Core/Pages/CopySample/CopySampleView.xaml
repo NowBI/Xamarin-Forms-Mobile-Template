@@ -9,6 +9,7 @@
     <Label StyleClass="SubHeader">
       Subheader of Page
     </Label>
+    <BoxView StyleClass="HorizontalRule" />
     <Label>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis maximus ornare quam, eget dignissim libero. Fusce vitae velit a nibh fringilla rutrum id at tellus. Etiam congue neque orci, eget porta risus vulputate sed. Nulla quis odio vel arcu ultricies euismod eget non erat. Fusce nec elementum dolor. Nulla accumsan velit at nibh vehicula iaculis. In urna ex, posuere sit amet tortor maximus, cursus hendrerit justo. Nulla id neque a mauris placerat pretium. Nullam justo nisl, commodo et leo nec, euismod tristique enim. Ut vel ligula nec augue viverra fringilla. Nam diam risus, tincidunt at elit feugiat, malesuada luctus massa.
     </Label>
