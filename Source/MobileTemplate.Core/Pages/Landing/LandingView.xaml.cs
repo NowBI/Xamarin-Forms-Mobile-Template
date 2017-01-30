@@ -15,7 +15,7 @@ namespace MobileTemplate.Core.Pages.Landing
         {
             InitializeComponent();
 
-            var image = "nbi_logo.png";
+            var image = "app_logo.png";
             var text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio sem, tempor laoreet orci ac, tempor volutpat odio.";
 
             var menuItemService = IoC.Container.Resolve<IMenuItemService>();

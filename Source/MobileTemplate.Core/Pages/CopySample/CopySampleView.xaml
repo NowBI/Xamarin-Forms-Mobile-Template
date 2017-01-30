@@ -55,7 +55,7 @@
     <Label>
       Integer feugiat, justo et rhoncus suscipit, felis eros viverra ligula, vel ornare ipsum tortor id augue. Donec fermentum non nunc sed fermentum. Proin vitae quam eros. Donec nec augue turpis. Vestibulum a lacinia sapien. Duis viverra enim at scelerisque dapibus. Suspendisse convallis gravida neque a finibus. Ut dictum aliquam leo, at tincidunt erat volutpat vitae. Nulla non lacinia orci, id mattis lectus. Integer pellentesque dolor eu lobortis porttitor. Suspendisse viverra non mauris vitae porta.
     </Label>
-    <Image Source="nbi_logo.png" HorizontalOptions="Center" Margin="32"  StyleClass="Rounded"/>
+    <Image Source="app_logo.png" HorizontalOptions="Center" Margin="32"  StyleClass="Rounded"/>
     <Label>
       Donec rhoncus lacinia vehicula. Quisque interdum metus vel egestas malesuada. Fusce ante nulla, varius ut tristique vel, aliquam at ligula. Nunc in rutrum risus, sit amet tincidunt felis. Cras id porttitor lacus. Nunc molestie nunc quis purus hendrerit, nec laoreet enim tempor. Curabitur molestie ligula a fringilla rhoncus. Donec blandit enim in vehicula tristique. Nullam tincidunt tincidunt vestibulum. Etiam sagittis condimentum sodales. Phasellus pharetra justo in nunc elementum, quis convallis nibh convallis.
     </Label>
