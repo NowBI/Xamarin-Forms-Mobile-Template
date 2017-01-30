@@ -18,7 +18,7 @@ Xamarin may throw a few red herring issues into your error box when you build. I
 
 The **MobileTemplate.Droid** project is configured to use the latest Android platform available to you, targeting Android 4.0.3 (API Level 15 - Ice Cream Sandwich). This can be adjusted to whichever settings you prefer by right-clicking the **MobileTemplate.Droid** project and hitting "Properties". In the "Application" tab dropdowns for changing these are available.
 
-To run the project on an Android device, simply set the Startup Project to "MobileTemplate.Droid" and the platform configuration to "ARM". Your list of emulators and connected devices should populate the run button. Select the device you want to deploy to and hit run to begin.
+To run the project on an Android device, simply set the Startup Project to "MobileTemplate.Droid" and the platform configuration to "Droid". Your list of emulators and connected devices should populate the run button. Select the device you want to deploy to and hit run to begin.
 
 For more information, see [Deployment, Testing, and Metrics](https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/) on Xamarin's developer guide.
 
@@ -206,7 +206,7 @@ For further discussion on this issue, see [this thread on the Xamarin forums](ht
 
 >My builds hang/take a really long time.
 
-If you're building Android or Core, make sure you're targeting the ARM or Core build configuration and don't have one of your iOs projects listed as your target build. Otherwise Visual Studio will attempt to communicate with your Mac Build Agent every time you rebuild. Alternatively, you can disconnect the Mac Build Agent in "Tools > iOS > Xamarin Mac Agent".
+If you're building Android or Core, make sure you're targeting the Droid or Core build configuration and don't have one of your iOs projects listed as your target build. Otherwise Visual Studio will attempt to communicate with your Mac Build Agent every time you rebuild. Alternatively, you can disconnect the Mac Build Agent in "Tools > iOS > Xamarin Mac Agent".
 
 If you're building iOS, check the Mac Build Agent and ensure there are no popup dialogs awaiting your confirmation (i.e. allowing access to your keychain so you can use your provisioning profiles.) If it is a timing issue, unfortunately the process of compiling core binaries, transferring them to the Mac, compiling the remaining code, then transferring them back, is quite time consuming. It may be worthwhile to do iOS-specific coding and debugging directly in a Mac environment if you find it to be too time consuming.
 
