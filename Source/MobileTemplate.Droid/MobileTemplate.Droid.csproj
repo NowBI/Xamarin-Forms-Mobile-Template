@@ -21,7 +21,7 @@
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
-    <JavaMaximumHeapSize />
+    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
     <JavaOptions />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
