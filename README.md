@@ -176,19 +176,19 @@ Each unit testing project can be built as described in the above MSBuild section
 
 ## Common Xamarin Issues
 
->The name 'InitializeComponent' does not exist in the current context
+>The name 'XYZ' does not exist in the current context
 
-Typically caused by Intellisense--it does not know how to handle Xamarin.Forms XAML views. Try the following:
+Intellisense does not quite know how to handle Xamarin at all times. Sometimes it needs to cache things or generate code from XAML in order to know it's actually doing just fine. Try the following:
 
-1. Restart Visual Studio
+1. Build the solution twice in a row.
 
-2. Clean and Rebuild the solution.
+2. Restart Visual Studio
 
-3. Open one of the offending view's XAML file (the .xaml file, not the .xaml.cs file) and make an inconsequential change (i.e. adding or removing whitespace) and hit Build to force Intellisense to refresh the xaml projects.
+3. Clean and Rebuild the solution.
 
-4. Right-click the Core project and Unload it, then Reload it.
+4. Open one of the offending view's XAML file (the .xaml file, not the .xaml.cs file) and make an inconsequential change (i.e. adding or removing whitespace) and hit Build to force Intellisense to refresh the xaml projects.
 
-Intellisense does not quite know how to handle Xamarin at all times. These types of issues can appear often in your Error List, but they are inconsequential and can be ignored. For the time being, we recommend you filter out Intellisense issues in your Error List.
+5. Right-click the Core project and Unload it, then Reload it.
 
 For further discussion on this issue, see [this thread on the Xamarin forums](https://forums.xamarin.com/discussion/62671/initializecomponent-does-not-exist-in-the-current-context-error).
 
