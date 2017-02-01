@@ -3,6 +3,8 @@ A simple [Xamarin Forms](https://www.xamarin.com/) project with a pre-configured
 
 The projects are built targeting PCL libraries mainly because Xamarin’s dotnet standard support is still in a transitional state. 
 
+*Please note that the selection of libraries included in this project and the configuration of the solution are not required to create Xamarin apps--this is merely a suite of tools we find useful for building cross-platform solutions!*
+
 # Getting Started
 
 ## Getting Xamarin
