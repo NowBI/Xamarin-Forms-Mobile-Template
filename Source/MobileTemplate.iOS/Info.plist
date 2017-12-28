@@ -24,7 +24,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>MobileTemplate</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.nowintelligence.template.test</string>
+	<string>com.voxteneo.iostemplate</string>
 	<key>CFBundleVersion</key>
 	<string>LOCAL_DEBUG</string>
 	<key>CFBundleShortVersionString</key>
