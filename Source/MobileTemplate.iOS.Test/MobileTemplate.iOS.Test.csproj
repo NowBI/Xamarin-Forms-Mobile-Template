@@ -94,6 +94,7 @@
     <Compile Include="Sample\SampleXUnitTestsiOS.cs" />
     <BundleResource Include="Resources\Text\asset_sample_text_file.txt" />
     <Compile Include="Service\AssetServiceiOSTest.cs" />
+    <None Include="app.config" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="AppDelegate.cs.txt" />
@@ -108,7 +109,7 @@
   <ItemGroup>
     <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.4.6.1\lib\netstandard1.1\Autofac.dll</HintPath>
-       <Private>True</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MonoTouch.NUnitLite" />
     <Reference Include="xunit.abstractions">
@@ -179,12 +180,10 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    
     <Error Condition="!Exists('..\..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets'))" />
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets'))" />
     <Error Condition="!Exists('..\..\packages\xunit.runner.devices.2.2.0\build\Xamarin.iOS\xunit.runner.devices.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\xunit.runner.devices.2.2.0\build\Xamarin.iOS\xunit.runner.devices.targets'))" />
   </Target>
-  
   <Import Project="..\..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
   <Import Project="..\..\packages\xunit.runner.devices.2.2.0\build\Xamarin.iOS\xunit.runner.devices.targets" Condition="Exists('..\..\packages\xunit.runner.devices.2.2.0\build\Xamarin.iOS\xunit.runner.devices.targets')" />
