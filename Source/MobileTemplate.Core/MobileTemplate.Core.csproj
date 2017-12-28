@@ -7,9 +7,9 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.6.1" />
-    <PackageReference Include="HockeySDK.Xamarin" Version="4.1.5" />
+    <PackageReference Include="HockeySDK.Xamarin" Version="5.1.1" />
     <PackageReference Include="ReactiveProperty" Version="3.6.0" />
-    <PackageReference Include="Xamarin.Forms" Version="2.3.4.267" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
     <PackageReference Include="Xamarin.Forms.Theme.Base" Version="1.0.0.43-pre1" />
     <PackageReference Include="Xamarin.Forms.Theme.Dark" Version="1.0.0.43-pre1" />
     <PackageReference Include="Xamarin.Forms.Theme.Light" Version="1.0.0.43-pre1" />
@@ -21,14 +21,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <!-- https://bugzilla.xamarin.com/show_bug.cgi?id=55591 -->
-    <None Remove="**\*.xaml" />
-
-    <Compile Update="**\*.xaml.cs" DependentUpon="%(Filename)" />
-    <EmbeddedResource Include="**\*.xaml" SubType="Designer" Generator="MSBuild:UpdateDesignTimeXaml" />
   </ItemGroup>
 
   <ItemGroup>
