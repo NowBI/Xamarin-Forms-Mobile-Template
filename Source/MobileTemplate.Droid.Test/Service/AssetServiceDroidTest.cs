@@ -11,7 +11,7 @@ namespace MobileTemplate.Droid.Test.Service
         }
 
         [Fact]
-        public void ReadAssetText_ShouldLoadTextFromFile()
+        public void ReadAssetText_ShouldLoadTextFromFile_Droid()
         {
             base.ReadAssetText_ShouldLoadTextFromFile("Text/asset_sample_text_file.txt", "Droid test text");
         }
