@@ -1,6 +1,7 @@
 # Xamarin-Forms-Mobile-Template
 
-** Fork from [NowBI/Xamarin-Forms-Mobile-Template](https://github.com/NowBI/Xamarin-Forms-Mobile-Template) : Migrate to VS 2017 and compatible with VS for mac / .NET Standard / Xamarin.Forms updated **
+**Fork from [NowBI/Xamarin-Forms-Mobile-Template](https://github.com/NowBI/Xamarin-Forms-Mobile-Template) : Migrate to VS 2017 and compatible with VS for mac / .NET Standard / Xamarin.Forms updated**
+
 A simple [Xamarin Forms](https://www.xamarin.com/) project with a pre-configured Visual Studio 2015 environment, View Templates, [Themes](https://developer.xamarin.com/guides/xamarin-forms/themes/), Observables and [Reactive Properties](https://msdn.microsoft.com/en-us/library/hh242985(v=vs.103).aspx), Dependency Injection via [Autofac](https://autofac.org/), Unit Tests via [xUnit](http://xunit.github.io/), and Crash Logging via [HockeyApp](https://hockeyapp.net/) to be used as a starting point for mobile projects deployed to Android and iOS.
 
 The projects are built targeting PCL libraries mainly because Xamarin’s dotnet standard support is still in a transitional state. 
