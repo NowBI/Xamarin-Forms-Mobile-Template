@@ -11,7 +11,7 @@ namespace MobileTemplate.iOS.Test.Service
         }
 
         [Fact]
-        public void ReadAssetText_ShouldLoadTextFromFile()
+        public void ReadAssetText_ShouldLoadTextFromFile_iOS()
         {
             base.ReadAssetText_ShouldLoadTextFromFile("Text/asset_sample_text_file.txt", "iOS test text");
         }
