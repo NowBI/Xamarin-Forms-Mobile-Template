@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileTemplate.Core", "Source\MobileTemplate.Core\MobileTemplate.Core.csproj", "{A7439E6B-2866-48F4-A696-85CC20A99F9E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.Core", "Source\MobileTemplate.Core\MobileTemplate.Core.csproj", "{A7439E6B-2866-48F4-A696-85CC20A99F9E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.Droid", "Source\MobileTemplate.Droid\MobileTemplate.Droid.csproj", "{0C5CF1B3-1F8E-4EDD-AF0C-5D9DB6497A94}"
 EndProject
@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.iOS.Test", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.Droid.Test", "Source\MobileTemplate.Droid.Test\MobileTemplate.Droid.Test.csproj", "{9C9D2097-B3CC-411F-B123-B9321607AEC2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileTemplate.Core.Test", "Source\MobileTemplate.Core.Test\MobileTemplate.Core.Test.csproj", "{674BE205-DF8E-4FFE-8434-D88762FBB0D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileTemplate.Core.Test", "Source\MobileTemplate.Core.Test\MobileTemplate.Core.Test.csproj", "{674BE205-DF8E-4FFE-8434-D88762FBB0D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

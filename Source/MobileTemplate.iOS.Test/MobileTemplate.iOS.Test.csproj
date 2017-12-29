@@ -112,17 +112,7 @@
     <BundleResource Include="Resources\Default-568h@2x.png" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.4.6.1\lib\netstandard1.1\Autofac.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="MonoTouch.NUnitLite" />
-    <Reference Include="ReactiveProperty, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ReactiveProperty.3.6.0\lib\Xamarin.iOS10\ReactiveProperty.dll</HintPath>
-    </Reference>
-    <Reference Include="ReactiveProperty.iOS, Version=3.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ReactiveProperty.3.6.0\lib\Xamarin.iOS10\ReactiveProperty.iOS.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.5.0.121934\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
@@ -152,6 +142,24 @@
     </Reference>
     <Reference Include="xunit.runner.utility.netstandard15, Version=2.2.0.3545, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <HintPath>..\..\packages\xunit.runner.utility.2.2.0\lib\netstandard1.5\xunit.runner.utility.netstandard15.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\..\packages\System.Reactive.Linq.3.0.0\lib\netstandard1.3\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\..\packages\System.Reactive.PlatformServices.3.0.0\lib\netstandard1.3\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="ReactiveProperty">
+      <HintPath>..\..\packages\ReactiveProperty.3.2.0\lib\Xamarin.iOS10\ReactiveProperty.dll</HintPath>
+    </Reference>
+    <Reference Include="ReactiveProperty.iOS">
+      <HintPath>..\..\packages\ReactiveProperty.3.2.0\lib\Xamarin.iOS10\ReactiveProperty.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\..\packages\System.Reactive.Core.3.0.0\lib\netstandard1.3\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\..\packages\System.Reactive.Interfaces.3.0.0\lib\netstandard1.0\System.Reactive.Interfaces.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
